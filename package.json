@@ -14,11 +14,13 @@
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "framer-motion": "^11.2.11",
     "lucide-react": "^0.395.0",
+    "mailgun.js": "^10.2.1",
     "next": "14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/mailgun-js": "^0.22.18",
     "@types/node": "^20.14.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

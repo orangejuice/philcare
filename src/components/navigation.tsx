@@ -1,3 +1,4 @@
+"use client"
 import React, {useEffect, useState} from "react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import {motion} from "framer-motion"
@@ -28,7 +29,7 @@ const Navigation = () => {
 
   return (
     <motion.nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 text-gray-700 bg-white shadow-md`}
+      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 text-gray-800 bg-white shadow-md`}
       initial={{y: -100}}
       animate={{y: 0}}
       transition={{duration: 0.5}}
@@ -43,7 +44,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <NavigationMenu.Root className="relative">
               <NavigationMenu.List className="flex space-x-4">
-                <NavItem href="#services">Services</NavItem>
+                <NavItem href="#services">Our Services</NavItem>
                 <NavItem href="#benefits">Benefits</NavItem>
                 <NavItem href="#process">Our Process</NavItem>
                 <NavItem href="#contact">Contact</NavItem>

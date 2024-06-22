@@ -162,7 +162,7 @@ export default function Home() {
                 {
                   step: 5,
                   name: "Smooth Onboarding",
-                  description: "Our team in Philippines facilitates a seamless transition of the candidate to Ireland."
+                  description: "Our team in the Philippines conducts background checks and facilitates a seamless transition of the candidate to Ireland."
                 },
                 {
                   step: 6,

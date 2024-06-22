@@ -189,7 +189,7 @@ export default function Home() {
               Let&apos;s Connect
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              Ready to elevate your healthcare staffing? We're here to help.
+              Ready to elevate your healthcare staffing? We&apos;re here to help.
             </p>
           </motion.div>
           <div className="grid md:grid-cols-2 gap-16">

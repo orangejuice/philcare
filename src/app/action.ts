@@ -21,9 +21,8 @@ export async function onConcatMessage(currentState: OnContactMessageState, rawFo
 
   const outcome = await result.json()
   if (!outcome.success) {
-    return {message: "Invalid Captcha", success: false}
+    return {message: "Captcha verification failed", success: false}
   }
-
 
   const mailgun = new Mailgun(FormData)
   const mg = mailgun.client({username: "api", key: process.env.MAILGUN_API_KEY!})
@@ -33,20 +32,20 @@ export async function onConcatMessage(currentState: OnContactMessageState, rawFo
     subject: "New Customer Contact Submission",
     text: `
 Name: ${formData.name}
+
 Email: ${formData.email}
+
 Organization: ${formData.organization}
+
 Message: ${formData.message}
 `
   }
   return await mg.messages.create("sandbox21c4eb4668ad46f894192682829be3fc.mailgun.org", data)
     .then(result => {
       console.log(result)
-      return {message: "Message submit successfully!", success: true}
+      return {message: "Message submitted successfully!", success: true}
     }).catch(error => {
       console.log(error)
-      return {message: "Message submit failed", success: false}
+      return {message: "Sending message failed.", success: false}
     })
-
-  // mutate data
-  // revalidate cache
 }

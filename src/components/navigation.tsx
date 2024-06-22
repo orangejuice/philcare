@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import {motion} from "framer-motion"
 import {Menu} from "lucide-react"
+import Image from "next/image"
 
 const NavItem = ({children, href}: {children: string, href: string}) => (
   <NavigationMenu.Item>
@@ -34,12 +35,10 @@ const Navigation = () => {
       animate={{y: 0}}
       transition={{duration: 0.5}}
     >
-      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isScrolled ? "" : ""}`}>
+      <div className={`max-w-7xl mx-auto ${isScrolled ? "" : ""}`}>
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <span className="text-lg font-bold">PhilCare Ireland</span>
-            </div>
+          <div className="flex relative items-center w-36 aspect-[2/0.6]">
+            <Image src="/logo-2.png" fill alt="logo" className="object-fill"/>
           </div>
           <div className="hidden md:block">
             <NavigationMenu.Root className="relative">

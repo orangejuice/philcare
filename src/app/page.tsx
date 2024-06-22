@@ -14,7 +14,7 @@ export default function Home() {
     <div className="font-sans">
       <Navigation/>
       <header className="min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
-        <Image fill src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" className="w-full object-cover" alt="hero"/>
+        <Image fill src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" className="object-cover" alt="hero"/>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent"/>
         <div className="flex flex-col gap-4 px-20 py-40 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
           <motion.p initial="hidden" whileInView="visible" viewport={{once: true}} variants={fadeIn} transition={{duration: 0.6, delay: 0.4}} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
@@ -47,7 +47,7 @@ export default function Home() {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              {icon: Users, title: "Expert Recruitment", description: "We source top-tier healthcare professionals tailored to your specific needs."},
+              {icon: Users, title: "Expert Recruitment", description: "We source top-tier healthcare assistants tailored to your specific needs."},
               {icon: BookOpen, title: "Rigorous Vetting", description: "Our thorough assessment ensures candidates exceed Irish healthcare standards."},
               {icon: Heart, title: "Holistic Support", description: "From visa processing to cultural integration, we provide end-to-end assistance."}
             ].map((service, index) => (
@@ -203,14 +203,21 @@ export default function Home() {
               <h3 className="text-lg font-bold mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <p className="flex items-center">
-                  <Phone className="mr-4 w-5 h-5 text-blue-500"/> +353 1 234 5678
+                  <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 085 266 8895
                 </p>
                 <p className="flex items-center">
-                  <Mail className="mr-4 w-5 h-5 text-blue-500"/> info@philcareireland.com
+                  <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie
                 </p>
-                <p className="flex items-center">
-                  <MapPin className="mr-4 w-5 h-5 text-blue-500"/> 123 Healthcare Street, Dublin, Ireland
-                </p>
+                <div className="flex">
+                  <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
+                  <div>
+                    <p>Unit 277,</p>
+                    <p>Colab,</p>
+                    <p>Atlantic Technological University</p>
+                    <p>Port Road, Letterkenny,</p>
+                    <p>Co.Donegal Ireland, F92 A0PY</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>

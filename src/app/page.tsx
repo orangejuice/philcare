@@ -167,7 +167,7 @@ export default function Home() {
                 {
                   step: 6,
                   name: "Ongoing Partnership",
-                  description: "Our support continues long after placement to ensure lasting success."
+                  description: "Our support continues long after placement to ensure your new hire integrate smoothly into your workplace."
                 }
               ].map((step, index) => (
                 <motion.div key={step.name} className="relative"

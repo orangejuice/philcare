@@ -142,12 +142,12 @@ export default function Home() {
                 {
                   step: 1,
                   name: "Consultation",
-                  description: "We discuss your specific needs and requirements."
+                  description: "We discuss your specific needs and requirements for healthcare assistants."
                 },
                 {
                   step: 2,
                   name: "Tailored Selection",
-                  description: "We select suitable candidates from our pool of professionals."
+                  description: "We select suitable candidates from our pool of professionals for you to interview."
                 },
                 {
                   step: 3,

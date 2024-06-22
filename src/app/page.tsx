@@ -151,16 +151,21 @@ export default function Home() {
                 },
                 {
                   step: 3,
-                  name: "Introduction",
-                  description: "You identify top candidates who align perfectly with your requirements from the interview process."
+                  name: "Interview",
+                  description: "You choose top candidates who align perfectly with your requirements."
                 },
                 {
                   step: 4,
-                  name: "Smooth Onboarding",
-                  description: "We handle paperwork and prepare the selected professionals for their new role."
+                  name: "Preparation",
+                  description: "We manage all necessary documentation, streamlining the hiring process for both you and the selected candidates."
                 },
                 {
                   step: 5,
+                  name: "Smooth Onboarding",
+                  description: "Our team in Philippines facilitates a seamless transition of the candidate to Ireland."
+                },
+                {
+                  step: 6,
                   name: "Ongoing Partnership",
                   description: "Our support continues long after placement to ensure lasting success."
                 }
@@ -186,7 +191,7 @@ export default function Home() {
             className="lg:text-center mb-12">
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Let&apos;s Connect
+              Learn More
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
               Ready to elevate your healthcare staffing? We&apos;re here to help.

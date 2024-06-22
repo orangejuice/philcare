@@ -147,7 +147,7 @@ export default function Home() {
                 {
                   step: 2,
                   name: "Tailored Selection",
-                  description: "We select suitable candidates from our pool of professionals for you to interview."
+                  description: "We select suitable candidates from our pool of healthcare professionals for you to interview."
                 },
                 {
                   step: 3,

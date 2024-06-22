@@ -152,7 +152,7 @@ export default function Home() {
                 {
                   step: 3,
                   name: "Introduction",
-                  description: "You interview and select your preferred candidates."
+                  description: "From the interview process, you select your ideal candidates who meets your requirements."
                 },
                 {
                   step: 4,

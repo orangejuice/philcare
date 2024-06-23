@@ -18,7 +18,7 @@ export default function Home() {
   return (<>
     <Navigation/>
     <header className="min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
-      <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero"/>
+      <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
       <div className="flex flex-col gap-4 px-20 py-40 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
         <motion.p {...viewPortFadeIn(0.4)} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}

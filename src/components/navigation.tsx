@@ -23,7 +23,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex relative items-center w-64 aspect-[751/128]">
-            <Image src="/logo-3.png" alt="logo"/>
+            <Image src="/logo-3.png" alt="logo" priority/>
           </div>
           <div className="hidden md:block">
             <NavigationMenu.Root className="relative">

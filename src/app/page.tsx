@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import {motion, Variants} from "framer-motion"
+import {motion, MotionProps} from "framer-motion"
 import {BookOpen, Briefcase, Globe, HandCoins, HandHelping, Heart, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
 import {Navigation} from "@/components/navigation"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
@@ -9,11 +9,11 @@ import {Image} from "@/components/image"
 import {LeafletMap} from "@/components/map"
 
 export default function Home() {
-  const fadeIn: Variants = {hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0}}
   const viewPortFadeIn = (delay = 0) => ({
-    initial: "hidden", whileInView: "visible", viewport: {once: true, amount: 0.5}, variants: fadeIn,
-    transition: {duration: 0.6, delay}
-  })
+    initial: "hidden", whileInView: "visible", viewport: {once: true, amount: 0.5}, variants: {
+      hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.6, delay}}
+    }
+  } as MotionProps)
 
   return (<>
     <Navigation/>
@@ -22,7 +22,7 @@ export default function Home() {
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
       <div className="flex flex-col gap-4 px-20 py-40 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
         <motion.p {...viewPortFadeIn(0.4)} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
-          className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-colors duration-300 shadow-lg">
+          className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg">
           <CheckBadgeIcon className="inline w-3.5 h-3.5"/><span className="font-extrabold">Free Introductory Offer</span> for limited time!
         </motion.p>
         <motion.h1 {...viewPortFadeIn()}

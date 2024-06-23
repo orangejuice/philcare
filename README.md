@@ -1,12 +1,21 @@
-# A Landing Page built on Modern Tech
+<div align="center">
+
+**A Landing Page built on Modern Tech**
 
 ![deploy](https://img.shields.io/github/deployments/orangejuice/philcare/production?logo=vercel&label=Vercel)
+![nextjs](https://img.shields.io/github/package-json/dependency-version/orangejuice/blog/next?label=Next.js&logo=next.js&color=222)
+![typescript](https://img.shields.io/badge/Typescript-3178c6?logo=typescript&logoColor=fff)
+![tailwind](https://img.shields.io/badge/Tailwind%20CSS-06b6d4?logo=tailwindcss&logoColor=fff)
+![motion](https://img.shields.io/badge/Framer%20Motion-0055ff?logo=framer&logoColor=fff)
+![leaflet](https://img.shields.io/badge/Leaflet-199900?logo=leaflet&logoColor=fff)
+
+</div>
 
 A simple yet comprehensive single-page marketing landing page showcasing:
 
 > **Who** we are, **What** we do, **Why** choose us, **How** we do it, **Get in touch**
 
-## Tech Stack
+## 📡 Tech Stack
 
 - Built on `Next.js`, `TailwindCSS`, `Framer Motion`
 - Utilize `useFormStatus`, `useFormState`, and `Server action` for handling form submission
@@ -18,7 +27,7 @@ A simple yet comprehensive single-page marketing landing page showcasing:
 
 <sup>Credits to `ChatGPT`, `Claude`, `Midjourney` for highly enjoyable pair programming experience<sup/>
 
-## Environment Variables
+## 💿 Environment Variables
 
 To run this project, you'll need to set up the following environment variables:
 
@@ -36,7 +45,7 @@ Turnstile, you can use the following keys:
 - Site Key: `1x00000000000000000000AA`
 - Secret Key: `1x0000000000000000000000000000000AA`
 
-## Getting Started
+## 🕹️ Getting Started
 
 1. Clone the repository
 2. Install dependencies: `bun install`

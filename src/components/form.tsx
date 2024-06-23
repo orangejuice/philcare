@@ -20,13 +20,11 @@ export function ContactForm() {
     }
   }, [isTyping])
 
-  const handleInputChange = () => {if (!isTyping) {setIsTyping(true)}}
-
   return (<>
-    <form className={cn("space-y-6", isPending && "opacity-50 pointer-events-none")} ref={formRef} action={(formData) => {
+    <form className="space-y-6" ref={formRef} action={(formData) => {
       formAction(formData)
       window.turnstile.reset()
-    }} onChange={handleInputChange}>
+    }} onChange={() => {if (!isTyping) {setIsTyping(true)}}}>
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
         <input type="text" disabled={isPending} required name="name" id="name" className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"/>

@@ -42,7 +42,7 @@ export default function Home() {
       </motion.div>
     </header>
     <section id="services" className="py-10 bg-white xl:mx-[15vw] xl:rounded-xl xl:shadow-2xl xl:-translate-y-2/3 xl:mb-[-10%]">
-      <div className="flex flex-col gap-10 px-6">
+      <div className="container mx-auto px-6 flex flex-col gap-10">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">What We Do</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
     </section>
     <section id="benefits" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Benefits</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -129,7 +129,7 @@ export default function Home() {
       </div>
     </section>
     <section id="process" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">How It Works</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -233,7 +233,7 @@ export default function Home() {
       </div>
     </section>
     <footer className="bg-blue-900 text-white py-6">
-      <div className="flex flex-row justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 flex flex-row justify-between">
         <p>&copy; 2024 PhilCare Ireland. All rights reserved.</p>
         <div className="flex gap-4 text-white">
           <a href={undefined} className="hover:text-yellow-400 transition-colors duration-300">

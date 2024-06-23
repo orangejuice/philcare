@@ -1,30 +1,20 @@
-# Single-Page Marketing Landing Page
+# A Landing Page built on Modern Tech
 
-A comprehensive single-page marketing landing page showcasing:
+![deploy](https://img.shields.io/github/deployments/orangejuice/philcare/production?logo=vercel&label=Vercel)
 
-1. **Who** we are & **What** we do
-2. **Why** choose us
-3. **How** we do it
+A simple yet comprehensive single-page marketing landing page showcasing:
 
-The page includes a dedicated contact form for easy communication.
+> **Who** we are, **What** we do, **Why** choose us, **How** we do it, **Get in touch**
 
 ## Tech Stack
 
-- **Frontend**:
-    - [Next.js](https://nextjs.org/) for server-side rendering and routing
-    - [TailwindCSS](https://tailwindcss.com/) for utility-first styling
-    - [Framer Motion](https://www.framer.com/motion/) for smooth animations
-
-- **Backend Services**:
-    - [Mailgun](https://www.mailgun.com/) for automated email sending
-    - [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) for user-friendly CAPTCHA protection
-
-- **Map Integration**:
-    - [Leaflet](https://leafletjs.com/) for highly customizable map display
-    - [Thunderforest](https://www.thunderforest.com/) for a generous, clean, high-DPI map tiles
-
-- **Data Processing**:
-    - Custom TypeScript crawling script powered by [Crawlee](https://crawlee.dev/) for data extraction and Excel export
+- Built on `Next.js`, `TailwindCSS`, `Framer Motion`
+- Utilize `useFormStatus`, `useFormState`, and `Server action` for handling form submission
+- `Mailgun` for automated email sending
+- Lazy load `Cloudflare Turnstile` for user-friendly CAPTCHA protection
+- `Leaflet` for highly customizable map display
+- `Thunderforest` for a generous, clean, high-DPI map tiles
+- Custom TypeScript crawling script powered by `Crawlee` for data extraction and Excel export
 
 <sup>Credits to `ChatGPT`, `Claude`, `Midjourney` for highly enjoyable pair programming experience<sup/>
 

@@ -6,6 +6,7 @@ import {Navigation} from "@/components/navigation"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/components/form"
 import {Image} from "@/components/image"
+import {LeafletMap} from "@/components/map"
 
 export default function Home() {
   const fadeIn: Variants = {hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0}}
@@ -202,7 +203,8 @@ export default function Home() {
             <h3 className="text-lg font-bold mb-6">Start Your Journey</h3>
             <ContactForm/>
           </motion.div>
-          <motion.div {...viewPortFadeIn(0.4)} className="text-blue-900">
+          <motion.div {...viewPortFadeIn(0.4)} className="text-blue-900 space-y-8">
+            {/*<div className="bg-white p-8 rounded-xl shadow-2xl">*/}
             <h3 className="text-lg font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <p className="flex items-center">
@@ -221,6 +223,10 @@ export default function Home() {
                   <p>Letterkenny, Co.Donegal Ireland, F92 A0PY</p>
                 </div>
               </div>
+            </div>
+            {/*</div>*/}
+            <div className="bg-white rounded-xl overflow-hidden">
+              <LeafletMap/>
             </div>
           </motion.div>
         </div>

@@ -1,17 +1,22 @@
 "use server"
 import Mailgun from "mailgun.js"
+import sanitizeHtml from "sanitize-html"
 
 type OnContactMessageState = {
   message?: string,
   success?: boolean
 }
 
-export async function onConcatMessage(currentState: OnContactMessageState, rawFormData: FormData): Promise<OnContactMessageState> {
-  const formData = Object.fromEntries(rawFormData)
+export async function onConcatMessage(currentState: OnContactMessageState, formData: FormData): Promise<OnContactMessageState> {
+  const name = sanitizeHtml((formData.get("name") as string))
+  const email = sanitizeHtml((formData.get("email") as string))
+  const organization = sanitizeHtml((formData.get("organization") as string))
+  const message = sanitizeHtml((formData.get("message") as string))
+
   const result = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     body: Object.entries({
       secret: process.env.CLOUDFLARE_SECRET_KEY,
-      response: formData["cf-turnstile-response"]
+      response: formData.get("cf-turnstile-response")
     }).reduce((formData, [k, v]) => {
       formData.append(k, v!)
       return formData
@@ -31,13 +36,13 @@ export async function onConcatMessage(currentState: OnContactMessageState, rawFo
     to: process.env.MAIL_RECIPENTS!.split(","),
     subject: "New Customer Contact Submission",
     text: `
-Name: ${formData.name}
+Name: ${name}
 
-Email: ${formData.email}
+Email: ${email}
 
-Organization: ${formData.organization}
+Organization: ${organization}
 
-Message: ${formData.message}
+Message: ${message}
 `
   }
   return await mg.messages.create("sandbox21c4eb4668ad46f894192682829be3fc.mailgun.org", data)

@@ -1,6 +1,6 @@
 "use client"
 import {useFormState, useFormStatus} from "react-dom"
-import {onConcatMessage} from "@/app/action"
+import {onConcatMessage} from "@/lib/actions"
 import React, {useEffect, useRef, useState} from "react"
 import {motion} from "framer-motion"
 import {cn} from "@/lib/utils"

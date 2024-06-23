@@ -18,14 +18,15 @@ A simple yet comprehensive single-page marketing landing page showcasing:
 ## 📡 Tech Stack
 
 - Built on `Next.js`, `TailwindCSS`, `Framer Motion`
-- Utilize `useFormStatus`, `useFormState`, and `Server action` for handling form submission
+- Modern form handling utilizing React's `useFormStatus` and `useFormState` hooks, coupled with Next.js `Server Actions
 - `Mailgun` for automated email sending
 - Lazy load `Cloudflare Turnstile` for user-friendly CAPTCHA protection
 - `Leaflet` for highly customizable map display
 - `Thunderforest` for a generous, clean, high-DPI map tiles
 - Custom TypeScript crawling script powered by `Crawlee` for data extraction and Excel export
 
-<sup>Credits to `ChatGPT`, `Claude`, `Midjourney` for highly enjoyable pair programming experience<sup/>
+<sup>Credits to `ChatGPT-4o`, `Claude-3.5 Sonnet`, `Midjourney v6` for highly enjoyable pair programming
+experience<sup/>
 
 ## 💿 Environment Variables
 

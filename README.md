@@ -1,6 +1,6 @@
 <div align="center">
 
-**A Landing Page built on Modern Tech**
+### A Landing Page Built on Modern Tech
 
 ![deploy](https://img.shields.io/github/deployments/orangejuice/philcare/production?logo=vercel&label=Vercel)
 ![nextjs](https://img.shields.io/github/package-json/dependency-version/orangejuice/blog/next?label=Next.js&logo=next.js&color=222)
@@ -18,12 +18,11 @@ A simple yet comprehensive single-page marketing landing page showcasing:
 ## 📡 Tech Stack
 
 - Built on `Next.js`, `TailwindCSS`, `Framer Motion`
-- Modern form handling utilizing React's `useFormStatus` and `useFormState` hooks, coupled with Next.js `Server Actions
+- Modern form handling utilizing React's `useFormStatus` and `useFormState` hooks, with `Server Actions`
 - `Mailgun` for automated email sending
 - Lazy load `Cloudflare Turnstile` for user-friendly CAPTCHA protection
-- `Leaflet` for highly customizable map display
-- `Thunderforest` for a generous, clean, high-DPI map tiles
-- Custom TypeScript crawling script powered by `Crawlee` for data extraction and Excel export
+- `Leaflet` for highly customizable map display and `Thunderforest` for a generous, clean, high-DPI map tiles
+- Custom TypeScript crawler powered by `Crawlee` and `Puppeteer` for data extraction and Excel export
 
 <sup>Credits to `ChatGPT-4o`, `Claude-3.5 Sonnet`, `Midjourney v6` for highly enjoyable pair programming
 experience<sup/>
@@ -53,6 +52,8 @@ Turnstile, you can use the following keys:
 3. Set up your environment variables in a `.env.local` file
 4. Run the development server: `bun run dev`
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+<sup> For crawler, run with `bun tool/crawler.ts {Website Url}`<sup/>
 
 ## License
 

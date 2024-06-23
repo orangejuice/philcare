@@ -1,6 +1,6 @@
 <div align="center">
 
-**A Landing Page built on Modern Tech**
+### A Landing Page Built on Modern Tech
 
 ![deploy](https://img.shields.io/github/deployments/orangejuice/philcare/production?logo=vercel&label=Vercel)
 ![nextjs](https://img.shields.io/github/package-json/dependency-version/orangejuice/blog/next?label=Next.js&logo=next.js&color=222)

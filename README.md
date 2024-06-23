@@ -53,6 +53,8 @@ Turnstile, you can use the following keys:
 4. Run the development server: `bun run dev`
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+<sup> For crawler, run with `bun tool/crawler.ts {Website Url}`<sup/>
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

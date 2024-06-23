@@ -22,8 +22,8 @@ export const Navigation = () => {
     <motion.nav className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 text-gray-800 bg-white shadow-md`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="flex relative items-center w-36 aspect-[2/0.6]">
-            <Image src="/logo-2.png" alt="logo"/>
+          <div className="flex relative items-center w-64 aspect-[751/128]">
+            <Image src="/logo-3.png" alt="logo"/>
           </div>
           <div className="hidden md:block">
             <NavigationMenu.Root className="relative">

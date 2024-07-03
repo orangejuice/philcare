@@ -7,12 +7,12 @@ import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/components/form"
 import {Image} from "@/components/image"
 import {LeafletMap} from "@/components/map"
+import Link from "next/link"
 
 export default function Home() {
   const viewPortFadeIn = (delay = 0) => ({
-    initial: "hidden", whileInView: "visible", viewport: {once: true, amount: 0.5}, variants: {
-      hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.6, delay}}
-    }
+    initial: "hidden", whileInView: "visible", viewport: {once: true, amount: 0.5},
+    variants: {hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.6, delay}}}
   } as MotionProps)
 
   return (<>
@@ -20,7 +20,7 @@ export default function Home() {
     <header className="min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
       <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
-      <div className="flex flex-col gap-4 px-20 py-40 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
+      <div className="flex flex-col gap-4 px-20 pt-40 pb-60 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
         <motion.p {...viewPortFadeIn(0.4)} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
           className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg">
           <CheckBadgeIcon className="inline w-3.5 h-3.5"/><span className="font-extrabold">Free Introductory Offer</span> for limited time!
@@ -236,12 +236,12 @@ export default function Home() {
       <div className="container mx-auto px-6 flex flex-row justify-between">
         <p>&copy; 2024 PhilCare Ireland. All rights reserved.</p>
         <div className="flex gap-4 text-white">
-          <a href={undefined} className="hover:text-yellow-400 transition-colors duration-300">
+          <Link href="https://www.facebook.com/philcare.ie" className="hover:text-yellow-400 transition-colors duration-300">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Facebook</title>
               <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/>
             </svg>
-          </a>
+          </Link>
           <a href={undefined} className="hover:text-yellow-400 transition-colors duration-300">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>LinkedIn</title>

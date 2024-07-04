@@ -20,9 +20,9 @@ export default function Home() {
     <header className="min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
       <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
-      <div className="flex flex-col gap-4 px-20 pt-40 pb-40 md:pb-60 relative z-10 justify-evenly items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
+      <div className="flex flex-col gap-4 px-20 md:pt-40 md:pb-60 relative z-10 justify-center items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
         <motion.p {...viewPortFadeIn(0.4)} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
-          className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg -mx-20">
+          className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg -mx-20 md:mx-0">
           <CheckBadgeIcon className="inline w-3.5 h-3.5"/><span className="font-extrabold">Free Introductory Offer</span> for limited time!
         </motion.p>
         <motion.h1 {...viewPortFadeIn()}

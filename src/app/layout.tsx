@@ -20,7 +20,14 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: ReactNode}>) {
   return (
     <html lang="en">
-      <Script src={"https://challenges.cloudflare.com/turnstile/v0/api.js"} async={true} defer={true}/>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async={true} defer={true}/>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-6GQSVJFT1H" async={true} defer={true}/>
+      <Script id="google-analytics">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-6GQSVJFT1H");`}
+      </Script>
       <Analytics/>
       <body className={`font-sans ${inter.className}`}>{children}</body>
     </html>

@@ -8,8 +8,14 @@ import {Analytics} from "@vercel/analytics/react"
 const inter = Inter({subsets: ["latin"]})
 
 export const metadata: Metadata = {
-  title: "PhilCare Ireland",
-  description: "Bridging healthcare across continents, empowering Irish nursing homes with exceptional Filipino talent.",
+  title: "PhilCare Ireland | Filipino Healthcare Professionals for Irish Nursing Homes",
+  description: "PhilCare Ireland specializes in recruiting skilled Filipino healthcare professionals for nursing homes across Ireland. Bridging healthcare across continents, empowering Irish nursing homes with exceptional Filipino talent.",
+  keywords: "Filipino nurses, Irish nursing homes, healthcare recruitment, PhilCare Ireland, overseas nurses, elderly care",
+  robots: "index, follow",
+  openGraph: {
+    title: "PhilCare Ireland | Filipino Healthcare Professionals",
+    description: "Connecting skilled Filipino healthcare workers with Irish nursing homes."
+  },
   icons: {
     icon: [{url: "/favicon-16x16.png", sizes: "16x16"}, {url: "/favicon-32x32.png", sizes: "32x32"}],
     apple: "/apple-touch-icon.png"

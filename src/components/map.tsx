@@ -36,9 +36,11 @@ export function LeafletMap() {
         doubleClickZoom: false,
         boxZoom: false,
         tap: false,
+        attributionControl: false,
         keyboard: false
       })
 
+      L.control.attribution({prefix: false}).addTo(map)
       L.tileLayer(`https://tile.thunderforest.com/atlas/{z}/{x}/{y}{r}.png?apikey=${process.env.NEXT_PUBLIC_THUNDERFOREST_API_KEY}`, {
         attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://www.thunderforest.com">Thunderforest</a>`
       }).addTo(map)

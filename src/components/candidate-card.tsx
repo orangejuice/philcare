@@ -13,7 +13,7 @@ export const CandidateCard = ({id, name, img, exp, role}: typeof candidates[numb
   const {fontSize, ref} = useFitText()
 
   return (
-    <div key={id} className="group relative rounded-2xl overflow-hidden" onTouchStart={() => setOpen(!open)}>
+    <div key={id} className="group relative rounded-2xl overflow-hidden" onClick={() => setOpen(!open)}>
       <div className="relative w-full aspect-[3/4]">
         <Image className="mx-auto w-full object-top ransition duration-500 group-hover:scale-105" src={img} alt={name}/>
       </div>

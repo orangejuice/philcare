@@ -54,13 +54,13 @@ export const Navigation = () => {
       {isOpen && (
         <div className="absolute bg-white w-full md:hidden ">
           <NavigationMenu.Root className="relative">
-            <NavigationMenu.List className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <NavigationMenu.List className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-md">
               <NavItem href="/">Home</NavItem>
-              <NavItem href="#services">Services</NavItem>
-              <NavItem href="#benefits">Benefits</NavItem>
-              <NavItem href="#process">Our Process</NavItem>
+              <NavItem href="/#services">Services</NavItem>
+              <NavItem href="/#benefits">Benefits</NavItem>
+              <NavItem href="/#process">Our Process</NavItem>
               <NavItem href="/candidates">Our candidates</NavItem>
-              <NavItem href="#contact">Contact</NavItem>
+              <NavItem href="/#contact">Contact</NavItem>
             </NavigationMenu.List>
           </NavigationMenu.Root>
         </div>

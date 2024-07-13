@@ -29,7 +29,7 @@ export function LeafletMap() {
     if (typeof L !== "undefined") {
       const map = L.map("map", {
         center: [54.9514628, -7.7191516],
-        zoom: 15,
+        zoom: 5,
         dragging: false,
         touchZoom: false,
         scrollWheelZoom: false,

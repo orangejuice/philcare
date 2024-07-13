@@ -1,4 +1,5 @@
 export const menu = {
+  "/": {text: "Home"},
   "": {
     text: "Who we are",
     sub: {

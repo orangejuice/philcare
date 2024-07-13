@@ -21,7 +21,7 @@ export const CandidateCard = ({id, name, img, exp, role}: typeof candidates[numb
         <p className="text-blue-300 text-xs">{role}</p>
         <h4 className="font-semibold text-nowrap leading-4" style={{fontSize}} ref={ref}>{name}</h4>
       </div>
-      <div className={cn("absolute bottom-0 inset-x-0 h-full overflow-y-auto mt-auto p-6 bg-gray-800 text-white",
+      <div className={cn("absolute bottom-0 inset-x-0 h-max max-h-full overflow-y-auto mt-auto p-6 bg-gray-800 text-white",
         "translate-y-[100%] transition duration-300 ease-in-out group-hover:translate-y-0", open && "translate-y-0")}>
         <p className="text-blue-300 text-xs">{role}</p>
         <h4 className="font-semibold text-lg">{name}</h4>

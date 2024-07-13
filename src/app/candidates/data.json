@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Kristina Marie P. Cagbabanua",
+    "age": 31,
+    "role": "Healthcare Assistant",
+    "exp": "1 year and 2 months private caregiver upto present\n(Internship) 1 month Davao Viel Geriatric Homecare  year 2023\nHospital Case (Covid patient) 3 weeks Davao Doctors Hospital  year 2022",
+    "intro": "",
+    "img": "/candidates/image-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Aiza A. Mendoza",
+    "age": 35,
+    "role": "Nurse Aide",
+    "exp": "3 years of being Private Nursing Aide/Caregiver up to present\nCase handled:\n- Covid Patient\n- Patient with: Tracheostomy, Intubated Patient, percutaneous endoscopic gastrostomy (Peg), Pigtail catheter, foley Catheter, Nasogastric Tube (Ngt)",
+    "img": "/candidates/image-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Mary Christine P. Cagbabanua",
+    "age": 31,
+    "role": "Nurse Aide",
+    "exp": "5 years of being Private Nursing Aide/Caregiver up to present\nCase handled:\n- Cancer patients\n- Covid\n- Palliative\n- Tracheostomy\n- Colonostomy\n- Peg tube (GA)\nand other patients with apparatus",
+    "img": "/candidates/image-3.png"
+  }
+]

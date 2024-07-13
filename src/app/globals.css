@@ -6,4 +6,9 @@
   html {
     @apply scroll-smooth
   }
+
+  body {
+    min-height: 101vh;
+    @apply font-sans antialiased
+  }
 }

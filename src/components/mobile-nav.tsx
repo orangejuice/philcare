@@ -1,6 +1,6 @@
 import {useMounted} from "@/lib/hooks"
 import {AnimatePresence, motion, Variants} from "framer-motion"
-import {Menu, MenuButton, MenuItem, MenuItems} from "@headlessui/react"
+import {Menu, MenuButton, MenuItem, MenuItems, MenuSeparator} from "@headlessui/react"
 import {cn} from "@/lib/utils"
 import {Icon} from "@/components/ui/icon"
 import {menu} from "@/site"
@@ -24,24 +24,19 @@ export function MobileNav() {
       <Overlay isOpen={open}/>
       <AnimatePresence>{open && (<>
         <MenuItems as={motion.div} variants={variant} initial="hidden" animate="show" exit="hidden"
-           className="absolute right-0 rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
+          className="absolute right-0 rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
           <div className="flex flex-col gap-6 p-2">
-            {menu.map(({text, path, sub}, index) => (
-              sub ? (
-                <Menu key={index}>
-                  <MenuButton className="flex items-center justify-between font-medium">
-                    {text}<Icon.nav.sub/>
-                  </MenuButton>
-                  <MenuItems as={motion.div} variants={variant} initial="hidden" animate="show" exit="hidden"
-                     className="absolute right-full rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
-                    <div className="flex flex-col gap-6 p-2 relative">
-                      {sub.map(({path, text}, index) =>
-                        <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap" onClick={close}>{text}</MenuItem>)}
-                    </div>
-                  </MenuItems>
-                </Menu>
-              ): <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>
-            ))}
+            {menu.map(({text, path, sub}, index) => (<>
+              {sub ? (<>
+                  <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>
+                  {sub.map(({path, text}, index) =>
+                    <MenuItem key={index} as={Link} href={path} className="flex items-center gap-2 font-medium text-nowrap">
+                      <Icon.nav.sub className="opacity-30"/> {text}
+                    </MenuItem>)}
+                </>
+              ) : <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>}
+              {index != menu.length - 1 && <MenuSeparator className="h-px bg-black/5"/>}
+            </>))}
           </div>
         </MenuItems></>)}
       </AnimatePresence></>)}

@@ -25,7 +25,7 @@ export const Header = () => {
                 {sub && (
                   <div className="flex flex-col space-y-4 text-sm">
                     {sub.map(({path, text}) => (
-                      <MenuItemContent key={path} href={`/${path}`}>{text}</MenuItemContent>
+                      <MenuItemContent key={path} href={path}>{text}</MenuItemContent>
                     ))}
                   </div>
                 )}

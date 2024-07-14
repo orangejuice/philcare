@@ -36,6 +36,42 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
         gtag("js", new Date());
         gtag("config", "G-6GQSVJFT1H");`}
       </Script>
+      <Script id="ld" type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "PhilCare Ireland",
+          "alternateName": "PhilCare",
+          "url": "https://philcare.ie",
+          "logo": "https://philcare.ie/logo-3.png",
+          "sameAs": ["https://facebook.com/philcare.ie"],
+          "description": "PhilCare Ireland provides skilled healthcare professionals from the Philippines to Irish nursing homes, offering expert recruitment and seamless integration services.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit 277, Colab, Atlantic Technological University, Port Road",
+            "addressLocality": "Letterkenny",
+            "addressRegion": "Co. Donegal",
+            "postalCode": "F92 A0PY",
+            "addressCountry": "IE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+353-085-266-8895",
+            "contactType": "customer support",
+            "email": "info@philcare.ie",
+            "availableLanguage": ["English"]
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ireland"
+          },
+          "potentialAction": [{
+            "@type": "ViewAction",
+            "target": "https://philcare.ie/candidates",
+            "name": "View Our Candidates"
+          }]
+        })
+      }}/>
       <Analytics/>
       <body className={`font-sans ${inter.className}`}>
         <Header/>

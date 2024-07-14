@@ -10,10 +10,10 @@ const ExoticImage = motion(forwardRef<HTMLImageElement, ImageProps>(
   }
 ))
 
-export const Image = (props: ImageProps & MotionProps) => {
+export const Image = ({noPlaceholder, ...props}: ImageProps & MotionProps & {noPlaceholder?: boolean}) => {
   const [loading, setIsLoading] = useState(true)
   return (<>
-    {loading && <div className="absolute inset-0 bg-stone-200 animate-pulse"/>}
+    {!noPlaceholder && loading && <div className="absolute inset-0 bg-stone-200 animate-pulse"/>}
     <ExoticImage initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}
       onAnimationComplete={() => setIsLoading(false)} {...props} />
   </>)

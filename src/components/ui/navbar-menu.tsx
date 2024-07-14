@@ -15,23 +15,17 @@ const transition: Transition = {
   restSpeed: 0.001
 }
 
-export const MenuItem = ({item, children}: ComponentPropsWithoutRef<"div"> & {item: {path: string, text: string} | string}) => {
+export const MenuItem = ({text, href, children}: ComponentPropsWithoutRef<"div"> & {href?: string, text: string}) => {
   const [active, setActive] = useGlobalState<string | undefined>("menu", undefined)
 
-  if (typeof item == "object") return (
-    <div onMouseEnter={() => setActive(undefined)} className="relative">
-      <MenuItemContent href={item.path}>{item.text}</MenuItemContent>
-    </div>
-  )
-
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
-      <MenuItemContent>{item}</MenuItemContent>
+    <div onMouseEnter={() => setActive(children ? text : undefined)} className="relative">
+      <MenuItemContent href={href}>{text}</MenuItemContent>
       <AnimatePresence>
         {active != undefined && (
           <motion.div initial={{opacity: 0, scale: 0.85, y: 10}} animate={{opacity: 1, scale: 1, y: 0}} exit={{opacity: 0, scale: 0.85, y: 10}}
             transition={{duration: 0.2}}>
-            {active === item && (
+            {active === text && (
               <div className="absolute left-1/2 transform -translate-x-1/2 pt-2">
                 <motion.div transition={transition} layoutId="active" className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl">
                   <motion.div layout className="w-max h-full p-4">
@@ -76,8 +70,9 @@ export const ProductItem = ({title, description, href, src}: {title: string; des
 export const MenuItemContent = ({href, children, ...rest}: ComponentPropsWithoutRef<"a"> & PartialBy<LinkProps, "href">) => {
   const [active] = useGlobalState<string | undefined>("menu", undefined)
 
-  const className = "block px-3 py-2 font-medium rounded-md transition-colors"
-
-  if (!href) return <p className={cn("cursor-pointer", className, active == children && "text-white bg-[rgba(59,130,246,1)]")}>{children}</p>
-  return <Link href={href} {...rest} className={cn(className, "hover:text-white hover:bg-[rgba(59,130,246,1)]")}>{children}</Link>
+  // @ts-ignore
+  return <Link href={href} {...rest}
+    className={cn("block px-3 py-2 text font-medium rounded-md transition-colors",
+      "hover:text-white hover:bg-[rgba(59,130,246,1)]", active == children && "text-white bg-[rgba(59,130,246,1)]")}>
+    {children}</Link>
 }

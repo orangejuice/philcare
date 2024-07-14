@@ -1,8 +1,13 @@
 import {ComponentProps, ComponentPropsWithoutRef, ComponentType, forwardRef} from "react"
 import {cn} from "@/lib/utils"
+import {ChevronRight, Menu, X} from "lucide-react"
 
 export const Icon = {
-
+  nav: {
+    sub: cns(ChevronRight),
+    menu: cns(Menu, "transition-[opacity] duration-300 ease-in-out"),
+    close: cns(X, "transition-[opacity] duration-300 ease-in-out")
+  },
   arrow: cns(Arrow, "h-fit fill-amber-500 z-10 rotate-180")
 }
 

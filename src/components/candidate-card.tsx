@@ -8,12 +8,12 @@ import {AnimatePresence, motion, MotionConfig} from "framer-motion"
 import {PlusIcon, XIcon} from "lucide-react"
 import {createPortal} from "react-dom"
 
-export const CandidateCard = ({id, name, img, exp, role}: typeof candidates[number]) => {
+export const CandidateCard = ({name, img, exp, role}: typeof candidates[number]) => {
   const [open, setOpen] = useState(false)
   const {fontSize, ref} = useFitText()
 
   return (
-    <div key={id} className="group relative rounded-2xl overflow-hidden" onClick={() => setOpen(!open)}>
+    <div className="group relative rounded-2xl overflow-hidden [box-shadow:_0_0_5px_rgba(0,0,0,0.15)]" onClick={() => setOpen(!open)}>
       <div className="relative w-full aspect-[3/4]">
         <Image className="mx-auto w-full object-top ransition duration-500 group-hover:scale-105" src={img} alt={name}/>
       </div>

@@ -4,12 +4,12 @@ import {motion, MotionProps} from "framer-motion"
 import {BookOpen, Briefcase, Globe, HandCoins, HandHelping, Heart, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/components/form"
-import {Image} from "@/components/image"
+import {Image} from "@/components/ui/image"
 import {LeafletMap} from "@/components/map"
 
 export default function Home() {
   const viewPortFadeIn = (delay = 0) => ({
-    initial: "hidden", whileInView: "visible", viewport: {once: true, amount: 0.5},
+    initial: "hidden", whileInView: "visible", viewport: {once: true},
     variants: {hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.6, delay}}}
   } as MotionProps)
 

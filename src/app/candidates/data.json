@@ -5,7 +5,6 @@
     "age": 31,
     "role": "Healthcare Assistant",
     "exp": "1 year and 2 months private caregiver upto present\n(Internship) 1 month Davao Viel Geriatric Homecare  year 2023\nHospital Case (Covid patient) 3 weeks Davao Doctors Hospital  year 2022",
-    "intro": "",
     "img": "/candidates/image-1.png"
   },
   {
@@ -23,5 +22,13 @@
     "role": "Nurse Aide",
     "exp": "5 years of being Private Nursing Aide/Caregiver up to present\nCase handled:\n- Cancer patients\n- Covid\n- Palliative\n- Tracheostomy\n- Colonostomy\n- Peg tube (GA)\nand other patients with apparatus",
     "img": "/candidates/image-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Aileen L. Cejas",
+    "age": 35,
+    "role": "Nurse Aide",
+    "exp": "Work experience:\n1 yr as a Private Caregiver (2015-2016) 2 yrs. Private Nurse Aide (2021- up to present\nDuties & Responsibilities:\n✅ Providing personal care: Assisting with activities of daily living such as bathing, dressing, grooming, and toileting.\n✅ Administering medication: Ensuring that the client takes their medication as prescribed and following any medication schedules.\n✅ Monitoring health: Keeping track of the client's health status, vital signs, and any changes in condition.\n✅ Assisting with mobility: Helping the client move around safely, using mobility aids if necessary.\n✅ Providing companionship: Engaging in conversation, activities, and companionship to promote emotional well-being.\n✅ Meal preparation: Planning and preparing nutritious meals according to dietary restrictions and preferences.\n✅ Light housekeeping: Keeping the client's living space clean and organized.\n",
+    "img": "/candidates/image-4.png"
   }
 ]

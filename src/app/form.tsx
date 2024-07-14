@@ -34,8 +34,8 @@ export function ContactForm() {
         <input type="email" disabled={isPending} required name="email" id="email" className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
       <div>
-        <label htmlFor="organization" className="block text-sm font-medium mb-2">Nursing Home Name</label>
-        <input type="text" disabled={isPending} required name="organization" id="organization" className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        <label htmlFor="organization" className="block text-sm font-medium mb-2">Nursing Home Name (optional)</label>
+        <input type="text" disabled={isPending} name="organization" id="organization" className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
       <div>
         <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>

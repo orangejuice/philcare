@@ -1,36 +1,38 @@
 "use client"
 import React from "react"
-import {motion, MotionProps} from "framer-motion"
-import {BookOpen, Briefcase, Globe, HandCoins, HandHelping, Heart, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
+import {motion} from "framer-motion"
+import {BookOpen, Briefcase, Building, Globe, HandCoins, HandHelping, Heart, Home as HomeIcon, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
-import {ContactForm} from "@/components/form"
+import {ContactForm} from "@/app/form"
 import {Image} from "@/components/ui/image"
 import {LeafletMap} from "@/components/map"
+import {LearnMoreButton} from "@/components/ui/button"
+import {viewPortFadeIn} from "@/components/generic"
 
 export default function Home() {
-  const viewPortFadeIn = (delay = 0) => ({
-    initial: "hidden", whileInView: "visible", viewport: {once: true},
-    variants: {hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.6, delay}}}
-  } as MotionProps)
 
   return (<>
     <header className="min-h-[calc(100vh-10rem)] md:min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
       <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
-      <div className="flex flex-col gap-4 px-20 md:pt-40 md:pb-60 relative z-10 justify-center items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
-        <motion.p {...viewPortFadeIn(0.4)} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
+      <div className="flex flex-col gap-4 px-20 md:pt-20 md:pb-80 relative z-10 justify-center items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
+        <motion.p {...viewPortFadeIn()} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
           className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg -mx-20 md:mx-0">
           <CheckBadgeIcon className="inline w-3.5 h-3.5"/><span className="font-extrabold">Free Introductory Offer</span> for limited time!
         </motion.p>
-        <motion.h1 {...viewPortFadeIn()}
+        <motion.h1 {...viewPortFadeIn(0.2)}
           className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl [text-shadow:0_1px_1px_rgb(0_0_0_/_50%)]">
           <span className="block">Quality Healthcare</span>{" "}
           <span className="block text-yellow-300">Professionals from the Philippines</span>
         </motion.h1>
-        <motion.p {...viewPortFadeIn(0.2)}
+        <motion.p {...viewPortFadeIn(0.4)}
           className="text-base text-blue-100 sm:max-w-xl sm:mx-auto md:text-lg lg:mx-0">
-          Empowering Irish nursing homes with compassionate and skilled care assistants.
+          Empowering Irish healthcare facilities and individuals with compassionate and skilled care professionals.
         </motion.p>
+        <motion.div {...viewPortFadeIn(0.6)} className="flex flex-col md:flex-row gap-y-8 gap-x-4 w-fit mt-5">
+          <LearnMoreButton href="/#care-options">Looking for careworkers</LearnMoreButton>
+          <LearnMoreButton href="/candidates/join">Become a careworker</LearnMoreButton>
+        </motion.div>
       </div>
       <motion.div className="absolute left-0 -bottom-1 w-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -48,9 +50,9 @@ export default function Home() {
         </motion.div>
         <div className="grid md:grid-cols-3 gap-12">
           {[
-            {icon: Users, title: "Expert Recruitment", description: "We source top-tier healthcare assistants tailored to your specific needs."},
-            {icon: BookOpen, title: "Rigorous Vetting", description: "Our thorough assessment ensures candidates exceed Irish healthcare standards."},
-            {icon: Heart, title: "Holistic Support", description: "From visa processing to cultural integration, we provide end-to-end assistance."}
+            {icon: Users, title: "Expert Recruitment", description: "We source top-tier healthcare professionals tailored to your specific needs, whether for facilities or individual care."},
+            {icon: BookOpen, title: "Rigorous Vetting", description: "Our thorough assessment ensures candidates exceed Irish healthcare standards for both institutional and private care."},
+            {icon: Heart, title: "Holistic Support", description: "From visa processing to cultural integration, we provide end-to-end assistance for a smooth transition to Irish healthcare settings."}
           ].map((service, index) => (
             <motion.div key={service.title} {...viewPortFadeIn((index + 1) * 0.2)}>
               <dt>
@@ -65,7 +67,40 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section id="benefits" className="py-16 bg-gray-50">
+    <section id="care-options" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <motion.div className="lg:text-center mb-12" {...viewPortFadeIn()}>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Care Options</h2>
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            Tailored Healthcare Solutions
+          </p>
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            We provide skilled healthcare professionals for various care settings to meet your unique needs.
+          </p>
+        </motion.div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.div className="flex items-center p-6 group"{...viewPortFadeIn(0.2)}>
+            <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
+              <Building className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-900">Nursing Home Staffing</h3>
+              <p className="text-gray-600">Expert healthcare professionals for round-the-clock resident care.</p>
+            </div>
+          </motion.div>
+          <motion.div className="flex items-center p-6 group"{...viewPortFadeIn(0.4)}>
+            <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
+              <HomeIcon className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-blue-900">Private In-Home Care</h3>
+              <p className="text-gray-600">Personalized care services tailored to individual needs at home.</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+    <section id="benefits" className="py-16">
       <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Benefits</h2>
@@ -76,7 +111,6 @@ export default function Home() {
             Our unique approach brings multiple advantages to your nursing home.
           </p>
         </motion.div>
-
         <div className="mt-10">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
             {[
@@ -125,7 +159,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section id="process" className="py-16 bg-white">
+    <section id="process" className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">How It Works</h2>
@@ -184,10 +218,10 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <motion.div {...viewPortFadeIn()} className="lg:text-center mb-12">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contact Us</h2>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Contact Us</h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Learn More
           </p>

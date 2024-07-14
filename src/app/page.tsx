@@ -93,7 +93,7 @@ export default function Home() {
               <HomeIcon className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-900">Private In-Home Care</h3>
+              <h3 className="text-xl font-semibold mb-2 text-blue-900">Private Live-in HomeCare</h3>
               <p className="text-gray-600">Personalized care services tailored to individual needs at home.</p>
             </div>
           </motion.div>

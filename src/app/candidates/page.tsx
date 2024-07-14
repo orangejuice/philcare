@@ -16,7 +16,7 @@ export default function Page() {
           </motion.h2>
           <motion.p className="mb-4 text-gray-600 dark:text-gray-300" {...viewPortFadeIn(0.2)}>
             Discover highly skilled and compassionate healthcare professionals from the Philippines,
-            ready to bring their expertise and dedication to Irish nursing homes.
+            ready to bring their expertise and dedication to Irish nursing homes and live-in home care.
           </motion.p>
         </div>
         <motion.div  {...viewPortFadeIn(0.4)}>

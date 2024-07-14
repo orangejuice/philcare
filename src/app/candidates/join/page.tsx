@@ -15,9 +15,11 @@ export default function Page() {
             Your Pathway to a Fulfilling Healthcare Career
           </motion.h2>
           <motion.p className="mb-4 text-gray-600 dark:text-gray-300 whitespace-pre-wrap" {...viewPortFadeIn(0.2)}>
-            {`Empowering Filipino Healthcare Professionals in Ireland.
-At PhilCare Ireland, we are dedicated to connecting talented healthcare professionals from the Philippines with rewarding opportunities in Ireland. Whether you’re an experienced nurse or a compassionate caregiver, we provide a seamless process to help you find the perfect role in nursing homes and for individuals in need of care.
-`}          </motion.p>
+            At PhilCare Ireland, we are dedicated to connecting talented healthcare professionals from the Philippines
+            with rewarding opportunities in Ireland. Whether you’re an experienced nurse or a compassionate caregiver,
+            we provide a seamless process to help you find the perfect role in nursing homes and for individuals
+            in need of live-in home care.
+          </motion.p>
         </div>
         <motion.div className="relative w-4/5 justify-self-center grid grid-cols-2 justify-items-center gap-24"  {...viewPortFadeIn(0.4)}>
           <Icon.arrow className="absolute top-0 left-1/2 -translate-x-1/2 w-[80px]"/>
@@ -37,6 +39,7 @@ At PhilCare Ireland, we are dedicated to connecting talented healthcare professi
     <section className="container mx-auto px-6 mb-16">
       <div className="w-full lg:max-w-lg mx-auto items-center gap-16">
         <motion.div {...viewPortFadeIn(0.6)} className="bg-white text-blue-900 rounded-xl">
+          <h3 className="text-lg font-bold mb-6">Start Your Journey</h3>
           <ContactForm/>
         </motion.div>
       </div>

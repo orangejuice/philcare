@@ -1,10 +1,43 @@
 "use client"
-import React, {ComponentPropsWithoutRef} from "react"
 import {AnimatePresence, motion, Transition} from "framer-motion"
+import {Image} from "@/components/ui/image"
+import React, {ComponentPropsWithoutRef} from "react"
+import {menu} from "@/site"
 import Link, {LinkProps} from "next/link"
-import Image from "next/image"
+import {MobileNav} from "@/components/mobile-nav"
 import {useGlobalState} from "@/lib/use-global-state"
 import {cn} from "@/lib/utils"
+
+
+export const Header = () => {
+  const [_, setActive] = useGlobalState<string | undefined>("menu", undefined)
+
+  return (
+    <nav className="sticky top-0 left-0 right-0 z-[1000] transition-all duration-300 text-gray-800 bg-white shadow-md">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          <Link href="/" className="flex relative items-center w-64 aspect-[751/128]">
+            <Image src="/logo-3.png" alt="logo" priority noPlaceholder/>
+          </Link>
+          <div onMouseLeave={() => setActive(undefined)} className="max-md:hidden relative flex justify-center gap-4 pb-4 -mb-4">
+            {menu.map(({path, text, sub}) => (
+              <MenuItem key={path} href={path} text={text}>
+                {sub && (
+                  <div className="flex flex-col space-y-4 text-sm">
+                    {sub.map(({path, text}) => (
+                      <MenuItemContent key={path} href={`/${path}`}>{text}</MenuItemContent>
+                    ))}
+                  </div>
+                )}
+              </MenuItem>
+            ))}
+          </div>
+          <MobileNav/>
+        </div>
+      </div>
+    </nav>
+  )
+}
 
 const transition: Transition = {
   type: "spring",
@@ -41,15 +74,6 @@ export const MenuItem = ({text, href, children}: ComponentPropsWithoutRef<"div">
   )
 }
 
-export const Menu = ({children}: ComponentPropsWithoutRef<"nav">) => {
-  const [_, setActive] = useGlobalState<string | undefined>("menu", undefined)
-
-  return (
-    <nav onMouseLeave={() => setActive(undefined)} className="relative flex justify-center gap-4 pb-4 -mb-4">
-      {children}
-    </nav>
-  )
-}
 
 export const ProductItem = ({title, description, href, src}: {title: string; description: string; href: string; src: string;}) => {
   return (

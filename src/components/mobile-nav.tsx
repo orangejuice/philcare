@@ -16,15 +16,15 @@ export function MobileNav() {
   }
 
   return (<>
-    <Menu>{({open, close}) => (<>
-      <MenuButton className={cn("md:hidden relative w-11 h-11 p-2 outline-none focus-visible:ring-0")}>
+    <Menu as="div" className="md:hidden relative">{({open, close}) => (<>
+      <MenuButton className={cn("relative w-11 h-11 p-2 outline-none focus-visible:ring-0")}>
         <Icon.nav.menu className={cn("absolute w-7 h-7 inset-2", open ? "opacity-0" : "opacity-100")}/>
         <Icon.nav.close className={cn("absolute w-7 h-7 inset-2", open ? "opacity-100" : "opacity-0")}/>
       </MenuButton>
       <Overlay isOpen={open}/>
       <AnimatePresence>{open && (<>
         <MenuItems as={motion.div} variants={variant} initial="hidden" animate="show" exit="hidden"
-          anchor="bottom end" className="z-40 overflow-hidden rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
+           className="absolute right-0 rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
           <div className="flex flex-col gap-6 p-2">
             {menu.map(({text, path, sub}, index) => (
               sub ? (
@@ -33,14 +33,14 @@ export function MobileNav() {
                     {text}<Icon.nav.sub/>
                   </MenuButton>
                   <MenuItems as={motion.div} variants={variant} initial="hidden" animate="show" exit="hidden"
-                    anchor="left start" className="z-50 overflow-hidden rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
-                    <div className="flex flex-col gap-6 p-2">
+                     className="absolute right-full rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
+                    <div className="flex flex-col gap-6 p-2 relative">
                       {sub.map(({path, text}, index) =>
                         <MenuItem key={index} as={Link} href={path} className="font-medium" onClick={close}>{text}</MenuItem>)}
                     </div>
                   </MenuItems>
                 </Menu>
-              ) : <MenuItem key={index} as={Link} href={path} className="font-medium">{text}</MenuItem>
+              ): <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>
             ))}
           </div>
         </MenuItems></>)}
@@ -49,6 +49,7 @@ export function MobileNav() {
   </>)
 }
 
+
 const Overlay = ({isOpen}: {isOpen: boolean}) => {
   const mounted = useMounted()
   if (!mounted) return null
@@ -56,7 +57,7 @@ const Overlay = ({isOpen}: {isOpen: boolean}) => {
   return createPortal(<>
     <AnimatePresence>{isOpen && (
       <motion.div initial={{opacity: 0}} animate={{opacity: 0.05}} exit={{opacity: 0}} transition={{duration: 0.1}}
-        className="fixed inset-0 bg-black z-20"/>)}
+        className="fixed inset-0 bg-black"/>)}
     </AnimatePresence>
   </>, document.body)
 }

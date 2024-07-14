@@ -79,7 +79,7 @@ export default function Home() {
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.div className="flex items-center p-6 group"{...viewPortFadeIn(0.2)}>
+          <motion.div className="flex items-start md:items-center group"{...viewPortFadeIn(0.2)}>
             <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
               <Building className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
               <p className="text-gray-600">Expert healthcare professionals for round-the-clock resident care.</p>
             </div>
           </motion.div>
-          <motion.div className="flex items-center p-6 group"{...viewPortFadeIn(0.4)}>
+          <motion.div className="flex items-start md:items-center group"{...viewPortFadeIn(0.4)}>
             <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
               <HomeIcon className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
             </div>

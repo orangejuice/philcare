@@ -6,7 +6,7 @@ import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/app/form"
 import {Image} from "@/components/ui/image"
 import {LeafletMap} from "@/components/map"
-import {LearnMoreButton} from "@/components/ui/button"
+import {CallToActionButton} from "@/components/ui/call-to-action-button"
 import {viewPortFadeIn} from "@/components/generic"
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <header className="min-h-[calc(100vh-10rem)] md:min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
       <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>
       <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-800/80 lg:via-blue-500/40 to-blue-500/75 lg:to-transparent" initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}}/>
-      <div className="flex flex-col gap-4 px-20 md:pt-20 md:pb-80 relative z-10 justify-center items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
+      <div className="flex flex-col gap-4 px-20 md:pt-20 py-14 md:pb-80 relative z-10 justify-center items-center text-center lg:justify-normal lg:items-start lg:text-left lg:max-w-2xl">
         <motion.p {...viewPortFadeIn()} whileHover={{boxShadow: "0px 0px 8px rgb(255,255,255)"}}
           className="flex items-center gap-1 bg-yellow-300 text-blue-900 px-2 py-0.5 text-xs rounded-full font-medium transition-shadow duration-300 shadow-lg -mx-20 md:mx-0">
           <CheckBadgeIcon className="inline w-3.5 h-3.5"/><span className="font-extrabold">Free Introductory Offer</span> for limited time!
@@ -30,8 +30,8 @@ export default function Home() {
           Empowering Irish healthcare facilities and individuals with compassionate and skilled care professionals.
         </motion.p>
         <motion.div {...viewPortFadeIn(0.6)} className="flex flex-col md:flex-row gap-y-8 gap-x-4 w-fit mt-5">
-          <LearnMoreButton href="/#care-options">Looking for careworkers</LearnMoreButton>
-          <LearnMoreButton href="/candidates/join">Become a careworker</LearnMoreButton>
+          <CallToActionButton href="/#care-options">Looking for careworkers</CallToActionButton>
+          <CallToActionButton href="/candidates/join">Become a careworker</CallToActionButton>
         </motion.div>
       </div>
       <motion.div className="absolute left-0 -bottom-1 w-full">
@@ -235,7 +235,6 @@ export default function Home() {
             <ContactForm/>
           </motion.div>
           <motion.div {...viewPortFadeIn(0.4)} className="text-blue-900 space-y-8">
-            {/*<div className="bg-white p-8 rounded-xl shadow-2xl">*/}
             <h3 className="text-lg font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <p className="flex items-center">
@@ -255,7 +254,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/*</div>*/}
             <div className="bg-white rounded-xl overflow-hidden">
               <LeafletMap/>
             </div>

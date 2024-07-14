@@ -4,7 +4,7 @@ import {CandidateCard} from "@/components/candidate-card"
 import React from "react"
 import {motion} from "framer-motion"
 import {viewPortFadeIn} from "@/components/generic"
-import {LearnMoreButton} from "@/components/ui/button"
+import {CallToActionButton} from "@/components/ui/call-to-action-button"
 
 export default function Page() {
   return (<>
@@ -20,7 +20,7 @@ export default function Page() {
           </motion.p>
         </div>
         <motion.div  {...viewPortFadeIn(0.4)}>
-          <LearnMoreButton className="text-blue-500" href="/candidates/join">Become a careworker</LearnMoreButton>
+          <CallToActionButton className="text-blue-500" href="/candidates/join">Become a careworker</CallToActionButton>
         </motion.div>
       </div>
     </section>

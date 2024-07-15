@@ -10,13 +10,13 @@ import {Footer} from "@/components/footer"
 const inter = Inter({subsets: ["latin"]})
 
 export const metadata: Metadata = {
-  title: "PhilCare Ireland | Filipino Healthcare Professionals for Irish Nursing Homes",
-  description: "PhilCare Ireland specializes in recruiting skilled Filipino healthcare professionals for nursing homes across Ireland. Bridging healthcare across continents, empowering Irish nursing homes with exceptional Filipino talent.",
-  keywords: "Filipino nurses, Irish nursing homes, healthcare recruitment, PhilCare Ireland, overseas nurses, elderly care, home care, private healthcare",
+  title: "PhilCare Ireland - Filipino Healthcare Professionals",
+  description: "PhilCare Ireland specializes in recruiting skilled Filipino healthcare professionals for Irish healthcare facilities and private home care needs across Ireland.",
+  keywords: "Filipino nurses, Irish nursing homes, healthcare recruitment, PhilCare Ireland, overseas nurses, elderly care, live-in care, home care, private healthcare",
   robots: "index, follow",
   openGraph: {
-    title: "PhilCare Ireland | Filipino Healthcare Professionals",
-    description: "Connecting skilled Filipino healthcare workers with Irish nursing homes."
+    title: "PhilCare Ireland - Filipino Healthcare Professionals",
+    description: "Connecting skilled Filipino healthcare workers with Irish nursing homes and live-in home care."
   },
   icons: {
     icon: [{url: "/favicon-16x16.png", sizes: "16x16"}, {url: "/favicon-32x32.png", sizes: "32x32"}],
@@ -45,7 +45,7 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
           "url": "https://philcare.ie",
           "logo": "https://philcare.ie/logo-3.png",
           "sameAs": ["https://facebook.com/philcare.ie"],
-          "description": "PhilCare Ireland provides skilled healthcare professionals from the Philippines to Irish nursing homes, offering expert recruitment and seamless integration services.",
+          "description": "PhilCare Ireland provides skilled healthcare professionals from the Philippines to Irish nursing homes and for live-in home care. We offer expert recruitment and seamless integration services to ensure high-quality care and support for all our clients.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Unit 277, Colab, Atlantic Technological University, Port Road",
@@ -69,6 +69,10 @@ export default function RootLayout({children}: Readonly<{children: ReactNode}>) 
             "@type": "ViewAction",
             "target": "https://philcare.ie/candidates",
             "name": "View Our Candidates"
+          }, {
+            "@type": "ViewAction",
+            "target": "https://philcare.ie/candidates/join",
+            "name": "Job Opportunity"
           }]
         })
       }}/>

@@ -1,9 +1,9 @@
 "use client"
 
-import {useEffect} from "react"
+import {ComponentPropsWithoutRef, useEffect} from "react"
 import {useMounted} from "@/lib/hooks"
 
-export function LeafletMap() {
+export function LeafletMap(props: ComponentPropsWithoutRef<"div">) {
   const mounted = useMounted()
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export function LeafletMap() {
     if (typeof L !== "undefined") {
       const map = L.map("map", {
         center: [54.9514628, -7.7191516],
-        zoom: 5,
+        zoom: 6,
         dragging: false,
         touchZoom: false,
         scrollWheelZoom: false,
@@ -50,5 +50,5 @@ export function LeafletMap() {
     }
   }
 
-  return <div id="map" style={{height: "300px", width: "100%"}}></div>
+  return <div id="map" {...props}></div>
 }

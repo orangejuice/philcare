@@ -254,9 +254,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl overflow-hidden">
-              <LeafletMap/>
-            </div>
+            <LeafletMap className="w-full h-80 shadow rounded-xl overflow-hidden"/>
           </motion.div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export const Header = () => {
   const [_, setActive] = useGlobalState<string | undefined>("menu", undefined)
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-[1000] transition-all duration-300 text-gray-800 bg-white shadow-md">
+    <nav className="sticky top-0 left-0 right-0 z-[1001] transition-all duration-300 text-gray-800 bg-white shadow-md">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex relative items-center w-64 aspect-[751/128]">

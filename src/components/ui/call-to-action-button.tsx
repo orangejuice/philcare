@@ -19,3 +19,5 @@ export const CallToActionButton = ({children, className, ...props}: ComponentPro
     </Link>
   )
 }
+
+// source: https://uiverse.io/cssbuttons-io/massive-mayfly-74

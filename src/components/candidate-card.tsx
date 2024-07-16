@@ -5,13 +5,16 @@ import {Image} from "@/components/ui/image"
 import {cn} from "@/lib/utils"
 import useFitText from "use-fit-text"
 import {Icon} from "@/components/ui/icon"
+import useTouchOnly from "@/lib/use-touch-only"
 
 export const CandidateCard = ({name, img, exp, role}: typeof candidates[number]) => {
   const [open, setOpen] = useState(false)
   const {fontSize, ref} = useFitText()
+  const onTouchOnly = () => {setOpen(!open)}
+  const touchHandlers = useTouchOnly({onTouchOnly})
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden [box-shadow:_0_0_5px_rgba(0,0,0,0.15)]" onClick={() => setOpen(!open)}>
+    <div className="group relative rounded-2xl overflow-hidden [box-shadow:_0_0_5px_rgba(0,0,0,0.15)]" {...touchHandlers}>
       <div className="relative w-full aspect-[3/4]">
         <Image className="mx-auto w-full object-top ransition duration-500 group-hover:scale-105" src={img} alt={name}/>
       </div>

@@ -17,8 +17,7 @@ export default function Page() {
           <motion.p className="mb-4 text-gray-600 dark:text-gray-300 whitespace-pre-wrap" {...viewPortFadeIn(0.2)}>
             At PhilCare Ireland, we are dedicated to connecting talented healthcare professionals from the Philippines
             with rewarding opportunities in Ireland. Whether you’re an experienced nurse or a compassionate caregiver,
-            we provide a seamless process to help you find the perfect role in nursing homes and for individuals
-            in need of live-in home care.
+            we provide a seamless process to help you find the perfect role in nursing homes and live-in home care settings.
           </motion.p>
         </div>
         <motion.div className="relative w-4/5 justify-self-center grid grid-cols-2 justify-items-center gap-24"  {...viewPortFadeIn(0.4)}>

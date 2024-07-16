@@ -1,13 +1,13 @@
 "use client"
-import candidates from "@/app/candidates/data.json"
 import React, {useState} from "react"
 import {Image} from "@/components/ui/image"
 import {cn} from "@/lib/utils"
 import useFitText from "use-fit-text"
 import {Icon} from "@/components/ui/icon"
 import useTouchOnly from "@/lib/use-touch-only"
+import {Candidate} from "contentlayer/generated"
 
-export const CandidateCard = ({name, img, exp, role}: typeof candidates[number]) => {
+export const CandidateCard = ({name, img, body, role}: Candidate) => {
   const [open, setOpen] = useState(false)
   const {fontSize, ref} = useFitText()
   const onTouchOnly = () => {setOpen(!open)}
@@ -34,8 +34,8 @@ export const CandidateCard = ({name, img, exp, role}: typeof candidates[number])
           <span className="flex items-center gap-1 text-nowrap"><Icon.check/> Nursing Home</span>
           <span className="flex items-center gap-1 text-nowrap"><Icon.check/> Live-in homecare</span>
         </div>
-        <div className="pt-4 text-gray-200 text-sm [&_br]:content-[''] [&_br]:block [&_br]:pt-2 whitespace-pre-wrap"
-          dangerouslySetInnerHTML={{__html: exp.replaceAll("\n", "<br/>")}}/>
+        <div className="pt-4 text-gray-200 text-sm prose"
+          dangerouslySetInnerHTML={{__html: body.html}}/>
       </div>
     </div>
   )

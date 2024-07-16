@@ -1,10 +1,10 @@
 "use client"
-import candidates from "./data.json"
 import {CandidateCard} from "@/components/candidate-card"
 import React from "react"
 import {motion} from "framer-motion"
 import {viewPortFadeIn} from "@/components/generic"
 import {CallToActionButton} from "@/components/ui/call-to-action-button"
+import {allCandidates} from "contentlayer/generated"
 
 export default function Page() {
   return (<>
@@ -26,7 +26,7 @@ export default function Page() {
     </section>
     <section className="container mx-auto px-6 mb-16">
       <motion.div className="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" {...viewPortFadeIn(0.6)}>
-        {candidates.map((candidate) => (
+        {allCandidates.map((candidate) => (
           <CandidateCard {...candidate} key={candidate.id}/>
         ))}
       </motion.div>

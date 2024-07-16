@@ -6,7 +6,7 @@ import {Icon} from "@/components/ui/icon"
 import {menu} from "@/site"
 import Link from "next/link"
 import {createPortal} from "react-dom"
-import React from "react"
+import React, {Fragment} from "react"
 
 
 export function MobileNav() {
@@ -26,17 +26,15 @@ export function MobileNav() {
         <MenuItems static as={motion.div} variants={variant} initial="hidden" animate="show" exit="hidden"
           className="absolute right-0 rounded-md border bg-white dark:bg-black outline-none shadow-xl origin-top-right p-4 min-w-40">
           <div className="flex flex-col gap-6 p-2">
-            {menu.map(({text, path, sub}, index) => (<>
-              {sub ? (<>
-                  <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>
-                  {sub.map(({path, text}, index) =>
-                    <MenuItem key={index} as={Link} href={path} className="flex items-center gap-2 font-medium text-nowrap">
-                      <Icon.nav.sub className="opacity-30"/> {text}
-                    </MenuItem>)}
-                </>
-              ) : <MenuItem key={index} as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>}
+            {menu.map(({text, path, sub}, index) => (<Fragment key={index}>
+              <MenuItem as={Link} href={path} className="font-medium text-nowrap">{text}</MenuItem>
+              {sub && sub.map(({path, text}, index) =>
+                <MenuItem key={index} as={Link} href={path} className="flex items-center gap-2 font-medium text-nowrap">
+                  <Icon.nav.sub className="opacity-30"/> {text}
+                </MenuItem>
+              )}
               {index != menu.length - 1 && <MenuSeparator className="h-px bg-black/5"/>}
-            </>))}
+            </Fragment>))}
           </div>
         </MenuItems></>)}
       </AnimatePresence></>)}

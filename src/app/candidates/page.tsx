@@ -26,9 +26,7 @@ export default function Page() {
     </section>
     <section className="container mx-auto px-6 mb-16">
       <motion.div className="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" {...viewPortFadeIn(0.6)}>
-        {allCandidates.map((candidate) => (
-          <CandidateCard {...candidate} key={candidate.id}/>
-        ))}
+        {allCandidates.map((candidate) => <CandidateCard {...candidate} key={candidate.id}/>)}
       </motion.div>
     </section>
   </>)

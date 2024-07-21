@@ -1,3 +1,7 @@
+export const site = {
+  url: "https://philcare.ie"
+}
+
 export const menu = [
   {
     text: "Who We Are",
@@ -11,7 +15,7 @@ export const menu = [
   {
     path: "/candidates", text: "Our Candidates",
     sub: [
-      {path: "/candidates/join", text: "Become A Careworker"},
+      {path: "/candidates/join", text: "Become A Careworker"}
     ]
   },
   {path: "/#contact", text: "Contact Us"}

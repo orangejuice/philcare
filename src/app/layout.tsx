@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "PhilCare Ireland - Filipino Healthcare Professionals",
   description: "PhilCare Ireland specializes in recruiting skilled Filipino healthcare professionals for Irish healthcare facilities and private home care needs across Ireland.",
   keywords: "Filipino nurses, Irish nursing homes, healthcare recruitment, PhilCare Ireland, overseas nurses, elderly care, live-in care, home care, private healthcare",
-  robots: "index, follow",
   openGraph: {
     title: "PhilCare Ireland - Filipino Healthcare Professionals",
     description: "Connecting skilled Filipino healthcare workers with Irish nursing homes and live-in home care."

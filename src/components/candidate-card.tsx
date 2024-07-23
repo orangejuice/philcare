@@ -36,6 +36,7 @@ export const CandidateCard = ({name, img, body, role}: Candidate) => {
         </div>
         <div className="pt-4 text-gray-200 text-sm prose"
           dangerouslySetInnerHTML={{__html: body.html}}/>
+        <p className="pt-4 text-gray-400 text-xs">Interested in this candidate?<br/>Contact us now to learn more about their qualifications and availability.</p>
       </div>
     </div>
   )

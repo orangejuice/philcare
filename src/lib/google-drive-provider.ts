@@ -23,11 +23,11 @@ const googleDriveProvider = async (contentDirPath: string) => {
   await Promise.all(res.data.files!.map(async (folder) => {
     const [mdFile, imageFile] = await Promise.all([
       drive.files.list({
-        q: `'${folder.id}' in parents and name='candidate.md'`,
+        q: `'${folder.id}' in parents and name='candidate.md' and trashed=false`,
         fields: "files(id, name)"
       }),
       drive.files.list({
-        q: `'${folder.id}' in parents and (mimeType='image/png' or mimeType='image/jpeg')`,
+        q: `'${folder.id}' in parents and (mimeType='image/png' or mimeType='image/jpeg') and trashed=false`,
         fields: "files(id, name, mimeType)"
       })
     ])

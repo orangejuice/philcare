@@ -31,8 +31,8 @@ export const CandidateCard = ({name, imagePath, availability, body, role}: Candi
         <p className="text-blue-300 text-xs">{role}</p>
         <h4 className="font-semibold text-lg">{name}</h4>
         <div className="flex flex-wrap mt-2 gap-x-4 text-xs">
-          <span className="flex items-center gap-1 text-nowrap"><Icon.check/> Nursing Home</span>
-          <span className="flex items-center gap-1 text-nowrap"><Icon.check/> Live-in homecare</span>
+          {availability.map((avail, index) =>
+            <span key={index} className="flex items-center gap-1 text-nowrap"><Icon.check/>{avail}</span>)}
         </div>
         <div className="pt-4 text-gray-200 text-sm prose"
           dangerouslySetInnerHTML={{__html: body.html}}/>

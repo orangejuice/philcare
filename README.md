@@ -20,6 +20,7 @@ A simple yet comprehensive single-page marketing landing page showcasing:
 - Built on `Next.js`, `TailwindCSS`, `Framer Motion`
 - Modern form handling utilizing React's `useFormStatus` and `useFormState` hooks, with `Server Actions`
 - `Mailgun` for automated email sending
+- Markdown support for content management, powered by contentlayer and Google Drive as remote storage
 - Lazy load `Cloudflare Turnstile` for user-friendly CAPTCHA protection
 - `Leaflet` for highly customizable map display and `Thunderforest` for a generous, clean, high-DPI map tiles
 - Custom TypeScript crawler powered by `Crawlee` and `Puppeteer` for data extraction and Excel export
@@ -37,6 +38,8 @@ NEXT_PUBLIC_CLOUDFLARE_SITE_KEY=your_cloudflare_site_key
 CLOUDFLARE_SECRET_KEY=your_cloudflare_secret_key
 MAILGUN_API_KEY=your_mailgun_api_key
 MAIL_RECIPIENTS=comma,separated,email,addresses
+GOOGLE_CLIENT_EMAIL=email_address_of_service_account
+GOOGLE_CLIENT_PRIVATE_KEY=private_key_of_service_account
 ```
 
 **Note**: For [local testing](https://developers.cloudflare.com/turnstile/troubleshooting/testing/) of Cloudflare

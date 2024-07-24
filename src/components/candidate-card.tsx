@@ -10,8 +10,9 @@ import {Candidate} from "contentlayer/generated"
 export const CandidateCard = ({name, imagePath, availability, body, role}: Candidate) => {
   const [open, setOpen] = useState(false)
   const {fontSize, ref} = useFitText()
-  const onTouchOnly = () => {setOpen(!open)}
-  const touchHandlers = useTouchOnly({onTouchOnly})
+  const touchHandlers = useTouchOnly({
+    onTouchOnly: () => setOpen(!open)
+  })
 
   return (
     <div className="group relative rounded-2xl overflow-hidden [box-shadow:_0_0_5px_rgba(0,0,0,0.15)]" {...touchHandlers}>

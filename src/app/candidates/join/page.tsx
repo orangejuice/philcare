@@ -6,6 +6,7 @@ import {ContactForm} from "./form"
 import {Image} from "@/components/ui/image"
 import {Icon} from "@/components/ui/icon"
 
+
 export default function Page() {
   return (<>
     <section className="bg-gradient-to-b from-blue-50 to-white py-16">

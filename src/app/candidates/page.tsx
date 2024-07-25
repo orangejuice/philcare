@@ -6,6 +6,7 @@ import {viewPortFadeIn} from "@/components/generic"
 import {CallToActionButton} from "@/components/ui/call-to-action-button"
 import {allCandidates} from "contentlayer/generated"
 
+
 export default function Page() {
   return (<>
     <section className="bg-gradient-to-b from-blue-50 to-white py-16">

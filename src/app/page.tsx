@@ -9,8 +9,8 @@ import {LeafletMap} from "@/components/map"
 import {CallToActionButton} from "@/components/ui/call-to-action-button"
 import {viewPortFadeIn} from "@/components/generic"
 
-export default function Home() {
 
+export default function Home() {
   return (<>
     <header className="min-h-[calc(100vh-10rem)] md:min-h-[calc(100vh-4rem)] flex relative overflow-hidden">
       <Image src="/07b276ed-052b-4985-af7d-cfd64180e361_0.png" alt="hero" priority/>

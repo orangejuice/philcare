@@ -237,9 +237,8 @@ export default function Home() {
           <motion.div {...viewPortFadeIn(0.4)} className="text-blue-900 space-y-8">
             <h3 className="text-lg font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
-              <p className="flex items-center gap-8">
-                <span className="flex items-center"><Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 085 266 8895</span>
-                <span className="flex items-center"><Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 305 3416</span>
+              <p className="flex items-center">
+                <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 305 3416
               </p>
               <p className="flex items-center">
                 <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie

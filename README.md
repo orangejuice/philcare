@@ -18,8 +18,8 @@ A simple yet comprehensive single-page marketing landing page showcasing:
 ## 📡 Tech Stack
 
 - Built on `Next.js`, `TailwindCSS`, `Framer Motion`
-- Modern form handling utilizing React's `useFormStatus` and `useFormState` hooks, with `Server Actions`
-- `Mailgun` for automated email sending
+- Modern form handling utilizing React `Server Actions`
+- `Resend` for automated email sending
 - Markdown support for content management, powered by contentlayer and Google Drive as remote storage
 - Lazy load `Cloudflare Turnstile` for user-friendly CAPTCHA protection
 - `Leaflet` for highly customizable map display and `Thunderforest` for a generous, clean, high-DPI map tiles

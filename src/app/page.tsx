@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import {motion} from "framer-motion"
-import {BookOpen, Briefcase, Building, Globe, HandCoins, HandHelping, Heart, Home as HomeIcon, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
+import {ArrowRight, BookOpen, Briefcase, Building, CheckCircle, Globe, HandCoins, HandHelping, Heart, Home as HomeIcon, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/app/form"
 import {Image} from "@/components/ui/image"
@@ -67,40 +67,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section id="care-options" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <motion.div className="lg:text-center mb-12" {...viewPortFadeIn()}>
-          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Care Options</h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Tailored Healthcare Solutions
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            We provide skilled healthcare professionals for various care settings to meet your unique needs.
-          </p>
-        </motion.div>
-        <div className="grid md:grid-cols-2 gap-8">
-          <motion.div className="flex items-start md:items-center group"{...viewPortFadeIn(0.2)}>
-            <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
-              <Building className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-900">Nursing Home Staffing</h3>
-              <p className="text-gray-600">Expert healthcare professionals for round-the-clock resident care.</p>
-            </div>
-          </motion.div>
-          <motion.div className="flex items-start md:items-center group"{...viewPortFadeIn(0.4)}>
-            <div className="mr-6 p-4 bg-blue-100 rounded-3xl transition-all duration-300 group-hover:bg-blue-500">
-              <HomeIcon className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-white"/>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-900">Private Live-in HomeCare</h3>
-              <p className="text-gray-600">Personalized care services tailored to individual needs at home.</p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-    <section id="benefits" className="py-16">
+    <section id="benefits" className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Benefits</h2>
@@ -159,7 +126,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section id="process" className="py-16 bg-gray-50">
+    <section id="process" className="py-16">
       <div className="container mx-auto px-6">
         <motion.div className="lg:text-center" {...viewPortFadeIn()}>
           <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">How It Works</h2>
@@ -218,6 +185,74 @@ export default function Home() {
         </div>
       </div>
     </section>
+    <section id="care-options" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <motion.div className="text-center mb-12" {...viewPortFadeIn()}>
+          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Care Options</h2>
+          <p className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+            Tailored Healthcare Solutions
+          </p>
+          <p className="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+            We provide skilled healthcare professionals for various care settings to meet your unique needs.
+          </p>
+        </motion.div>
+        <div className="grid md:grid-cols-2 gap-8 mt-16">
+          {[
+            {
+              title: "Nursing Home Staffing",
+              icon: Building,
+              description: "Expert healthcare professionals for round-the-clock resident care. Our candidates ensures high-quality, compassionate support for nursing home residents, maintaining a comfortable and safe environment.",
+              features: [
+                "Skilled Nursing Staff",
+                "Specialized Dementia Support",
+                "Rehabilitation Services"
+              ],
+              link: "/nursing-home"
+            },
+            {
+              title: "Private Live-in HomeCare",
+              icon: HomeIcon,
+              description: "Personalized care services tailored to individual needs at home. Our dedicated caregivers provide comprehensive support, ensuring comfort and independence in familiar surroundings.",
+              features: [
+                "24/7 Personal Care",
+                "Companionship & Emotional Support",
+                "Household Assistance",
+              ],
+              link: "/live-in-care"
+            }
+          ].map((option, index) => (
+            <motion.a href={option.link} key={option.title}
+              className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl cursor-pointer"
+              {...viewPortFadeIn((index + 1) * 0.2)}>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative p-8 z-10 flex flex-col h-full">
+                <div className="flex items-center mb-6">
+                  <div className="p-4 bg-blue-100 rounded-full transition-all duration-300 group-hover:bg-white">
+                    <option.icon className="w-10 h-10 text-blue-600 transition-all duration-300 group-hover:text-blue-500"/>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-white ml-4 transition-colors duration-300">{option.title}</h3>
+                </div>
+                <p className="text-gray-600 group-hover:text-blue-100 mb-6 flex-grow transition-colors duration-300">
+                  {option.description}
+                </p>
+                <ul className="text-gray-600 group-hover:text-blue-100 mb-6 transition-colors duration-300">
+                  {option.features.map((feature, index) => (
+                    <li key={index} className="flex items-center mb-2">
+                      <CheckCircle className="w-5 h-5 mr-2 text-green-500 group-hover:text-green-300"/>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="inline-flex items-center text-blue-600 font-semibold group-hover:text-white transition-colors duration-300">
+                  Learn More
+                  <ArrowRight className="ml-2 w-5 h-5"/>
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <motion.div {...viewPortFadeIn()} className="lg:text-center mb-12">
@@ -229,9 +264,9 @@ export default function Home() {
             Ready to elevate your healthcare staffing? We&apos;re here to help.
           </p>
         </motion.div>
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 items-start gap-16">
           <motion.div {...viewPortFadeIn(0.2)} className="bg-white text-blue-900 p-8 rounded-xl shadow-2xl">
-            <h3 className="text-lg font-bold mb-6">Start Your Journey</h3>
+            <h3 className="text-lg font-bold mb-6">Contact Us</h3>
             <ContactForm/>
           </motion.div>
           <motion.div {...viewPortFadeIn(0.4)} className="text-blue-900 space-y-8">

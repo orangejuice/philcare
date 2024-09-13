@@ -2,10 +2,10 @@
 import React, {useState} from "react"
 import {useForm} from "react-hook-form"
 import {motion} from "framer-motion"
-import {submitContactForm} from "@/lib/actions"
+import {submitLiveInCareInquiry} from "@/lib/actions"
 
-export function ContactForm() {
-  const {register, handleSubmit, formState: {errors}, reset} = useForm()
+export function LiveInCareForm() {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm()
   const [submitting, setSubmitting] = useState(false)
   const [message, setMessage] = useState("")
 
@@ -15,7 +15,7 @@ export function ContactForm() {
     const formData = new FormData()
     Object.entries(data).forEach(([key, value]) => formData.append(key, value as string))
 
-    const result = await submitContactForm(formData)
+    const result = await submitLiveInCareInquiry(formData)
     setSubmitting(false)
     setMessage(result.message)
     if (result.success) {
@@ -30,33 +30,43 @@ export function ContactForm() {
         <input
           type="text"
           id="name"
-          {...register("name", {required: "Your name is required"})}
+          {...register("name", { required: "Your name is required" })}
           className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         {errors.name && <span className="text-red-500 text-sm">{errors.name.message as string}</span>}
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
+        <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
         <input
           type="email"
           id="email"
           {...register("email", {
             required: "Email is required",
-            pattern: {value: /^\S+@\S+$/i, message: "Invalid email address"}
+            pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
           })}
           className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         {errors.email && <span className="text-red-500 text-sm">{errors.email.message as string}</span>}
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
+        <label htmlFor="phoneNumber" className="block text-sm font-medium mb-2">Phone Number</label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          {...register("phoneNumber", { required: "Phone number is required" })}
+          className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        {errors.phoneNumber && <span className="text-red-500 text-sm">{errors.phoneNumber.message as string}</span>}
+      </div>
+      <div>
+        <label htmlFor="careNeeds" className="block text-sm font-medium mb-2">Care Needs</label>
         <textarea
-          id="message"
-          {...register("message", {required: "Please enter your message"})}
+          id="careNeeds"
+          {...register("careNeeds", { required: "Please describe your care needs" })}
           rows={4}
           className="w-full p-3 rounded bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
         ></textarea>
-        {errors.message && <span className="text-red-500 text-sm">{errors.message.message as string}</span>}
+        {errors.careNeeds && <span className="text-red-500 text-sm">{errors.careNeeds.message as string}</span>}
       </div>
       <motion.button
         type="submit"
@@ -65,10 +75,9 @@ export function ContactForm() {
         whileHover={{scale: 1.05, boxShadow: "0px 0px 8px rgb(255,255,255)"}}
         whileTap={{scale: 0.95}}
       >
-        {submitting ? "Sending..." : "Send Message"}
+        {submitting ? "Submitting..." : "Request Information"}
       </motion.button>
-      {message &&
-        <p className={`text-sm ${message.includes("success") ? "text-green-500" : "text-red-500"}`}>{message}</p>}
+      {message && <p className={`text-sm ${message.includes("success") ? "text-green-500" : "text-red-500"}`}>{message}</p>}
     </form>
   )
 }

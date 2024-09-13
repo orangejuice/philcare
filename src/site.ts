@@ -9,7 +9,8 @@ export const menu = [
     sub: [
       {path: "/#services", text: "Our Services"},
       {path: "/#benefits", text: "Why Choose Us"},
-      {path: "/#process", text: "How It Works"}
+      {path: "/#process", text: "How It Works"},
+      {path: "/#care-options", text: "Care Solutions"},
     ]
   },
   {

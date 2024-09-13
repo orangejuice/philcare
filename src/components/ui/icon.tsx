@@ -13,10 +13,11 @@ export const Icon = {
 }
 
 function cns<T extends ComponentType<any>>(Component: T, predefined?: string) {
+  // @ts-ignore
   return forwardRef(function Icon({className, ...props}: ComponentProps<T>, ref) {
     // @ts-ignore
     return <Component className={cn("h-4 w-4 shrink-0", predefined, className)} {...props} ref={ref}/>
-  })
+  }) as ComponentType<any> & { className?: string }
 }
 
 

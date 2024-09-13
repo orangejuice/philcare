@@ -4,6 +4,7 @@ import {Resend} from "resend"
 import {NursingHomeInquiryEmail} from "@/emails/nursing-home-inquiry"
 import {LiveInCareInquiryEmail} from "@/emails/live-in-care-inquiry"
 import {ContactFormEmail} from "@/emails/contact-form-email"
+import {CandidateApplicationEmail} from "@/emails/candidate-application-email"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -63,5 +64,28 @@ export async function submitContactForm(formData: FormData) {
   } catch (error) {
     console.error('Error sending contact form email:', error)
     return { success: false, message: "Failed to send your message. Please try again." }
+  }
+}
+
+export async function submitCandidateApplication(formData: FormData) {
+  const firstName = formData.get('firstName') as string
+  const lastName = formData.get('lastName') as string
+  const email = formData.get('email') as string
+  const phoneNumber = formData.get('phoneNumber') as string
+  const profession = formData.get('profession') as string
+  const experience = formData.get('experience') as string
+  const message = formData.get('message') as string
+
+  try {
+    await resend.emails.send({
+      from: 'PhilCare Ireland <noreply@philcare.ie>',
+      to: process.env.MAIL_RECIPENTS!.split(","),
+      subject: 'New Candidate Application',
+      react: CandidateApplicationEmail({ firstName, lastName, email, phoneNumber, profession, experience, message })
+    })
+    return { success: true, message: "Your application has been submitted successfully!" }
+  } catch (error) {
+    console.error('Error sending candidate application email:', error)
+    return { success: false, message: "Failed to submit your application. Please try again." }
   }
 }

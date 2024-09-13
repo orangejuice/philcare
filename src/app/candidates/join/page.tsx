@@ -2,7 +2,7 @@
 import React from "react"
 import {motion} from "framer-motion"
 import {viewPortFadeIn} from "@/components/generic"
-import {ContactForm} from "./form"
+import {CandidateApplicationForm} from "./form"
 import {Image} from "@/components/ui/image"
 import {Icon} from "@/components/ui/icon"
 
@@ -40,7 +40,7 @@ export default function Page() {
       <div className="w-full lg:max-w-lg mx-auto items-center gap-16">
         <motion.div {...viewPortFadeIn(0.6)} className="bg-white text-blue-900 rounded-xl">
           <h3 className="text-lg font-bold mb-6">Start Your Journey</h3>
-          <ContactForm/>
+          <CandidateApplicationForm/>
         </motion.div>
       </div>
     </section>

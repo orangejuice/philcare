@@ -44,7 +44,7 @@ export default function LiveInCarePage() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-xl mx-auto">
-          <motion.div {...viewPortFadeIn(0.2)} className="bg-white text-blue-900 rounded-xl shadow-2xl p-8">
+          <motion.div {...viewPortFadeIn(0.2)} className="text-blue-900">
             <h3 className="text-2xl font-bold mb-6">Request Live-in Care Information</h3>
             <LiveInCareForm/>
           </motion.div>

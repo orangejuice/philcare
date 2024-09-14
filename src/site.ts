@@ -16,8 +16,8 @@ export const menu = [
   {
     path: "/#care-options", text: "Care Solutions",
     sub: [
-      {path: "/nursing-home", text: "Nursing Home"},
-      {path: "/live-in-care", text: "Live-in HomeCare"}
+      {path: "/nursing-home", text: "for Nursing Home"},
+      {path: "/live-in-care", text: "for Live-in HomeCare"}
     ]
   },
   {

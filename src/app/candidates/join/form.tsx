@@ -79,8 +79,8 @@ export function CandidateApplicationForm() {
         >
           <option value="">Select your profession</option>
           <option value="nurse">Nurse</option>
+          <option value="nurse-aide">Nurse Aide</option>
           <option value="caregiver">Caregiver</option>
-          <option value="therapist">Therapist</option>
           <option value="other">Other</option>
         </select>
         {errors.profession && <span className="text-red-500 text-sm mt-1">{errors.profession.message as string}</span>}

@@ -5,10 +5,11 @@ import {viewPortFadeIn} from "@/components/generic"
 import {LiveInCareForm} from "./form"
 import {Image} from "@/components/ui/image"
 import {Clock, Heart, Home} from "lucide-react"
+import {CandidatesSection} from "@/components/candidates-section"
 
 export default function LiveInCarePage() {
   return (<>
-    <section className="bg-gradient-to-b from-blue-50 to-white pt-16">
+    <section className="bg-gradient-to-b from-blue-50 to-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 items-start gap-12">
           <motion.div className="relative aspect-[16/9]" {...viewPortFadeIn()}>
@@ -39,10 +40,11 @@ export default function LiveInCarePage() {
         </div>
       </div>
     </section>
+    <CandidatesSection/>
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-xl mx-auto">
-          <motion.div {...viewPortFadeIn(0.6)} className="bg-white text-blue-900 rounded-xl shadow-2xl p-8">
+          <motion.div {...viewPortFadeIn(0.2)} className="bg-white text-blue-900 rounded-xl shadow-2xl p-8">
             <h3 className="text-2xl font-bold mb-6">Request Live-in Care Information</h3>
             <LiveInCareForm/>
           </motion.div>

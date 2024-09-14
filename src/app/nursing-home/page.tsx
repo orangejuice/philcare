@@ -5,10 +5,11 @@ import {viewPortFadeIn} from "@/components/generic"
 import {NursingHomeForm} from "./form"
 import {Image} from "@/components/ui/image"
 import {Building, ClipboardCheck, Users} from "lucide-react"
+import {CandidatesSection} from "@/components/candidates-section"
 
 export default function NursingHomePage() {
   return (<>
-    <section className="bg-gradient-to-b from-blue-50 to-white pt-16">
+    <section className="bg-gradient-to-b from-blue-50 to-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 items-start gap-12">
           <motion.div className="relative aspect-[16/9]" {...viewPortFadeIn()}>
@@ -23,7 +24,7 @@ export default function NursingHomePage() {
             </p>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <Building className="w-5 h-5 mr-2 text-blue-500"/>
+                <Users className="w-5 h-5 mr-2 text-blue-500"/>
                 <span>Skilled nursing staff</span>
               </li>
               <li className="flex items-center">
@@ -31,7 +32,7 @@ export default function NursingHomePage() {
                 <span>Specialized dementia support</span>
               </li>
               <li className="flex items-center">
-                <Users className="w-5 h-5 mr-2 text-blue-500"/>
+                <Building className="w-5 h-5 mr-2 text-blue-500"/>
                 <span>Rehabilitation services</span>
               </li>
             </ul>
@@ -39,12 +40,13 @@ export default function NursingHomePage() {
         </div>
       </div>
     </section>
+    <CandidatesSection/>
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-xl mx-auto">
-          <motion.div {...viewPortFadeIn(0.4)} className="bg-white text-blue-900 rounded-xl shadow-2xl p-8">
+          <motion.div {...viewPortFadeIn(0.2)} className="bg-white text-blue-900 rounded-xl shadow-2xl p-8">
             <h3 className="text-2xl font-bold mb-6">Request Nursing Home Staffing</h3>
-            <NursingHomeForm />
+            <NursingHomeForm/>
           </motion.div>
         </div>
       </div>

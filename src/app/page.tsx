@@ -273,7 +273,7 @@ export default function Home() {
             <h3 className="text-lg font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <p className="flex items-center">
-                <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 305 3416 (WhatsApp)
+                <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 801 8681 (WhatsApp)
               </p>
               <p className="flex items-center">
                 <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie

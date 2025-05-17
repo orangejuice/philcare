@@ -109,7 +109,7 @@ export default function Home() {
               {
                 icon: Scale,
                 name: "Compliance Assured",
-                description: "All placements adhere to Irish immigration and healthcare regulations."
+                description: "All placements adhere to Irish immigration and healthcare regulations. We have a certified registration number 785640 in Philcare recruitment and relocation Ireland limited. "
               }
             ].map((benefit, index) => (
               <motion.div key={benefit.name} {...viewPortFadeIn((index + 1) * 0.2)} className="relative">
@@ -278,16 +278,30 @@ export default function Home() {
               <p className="flex items-center">
                 <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie
               </p>
-              <div className="flex">
-                <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
-                <div>
-                  <p>Unit 277,</p>
-                  <p>Colab,</p>
-                  <p>Atlantic Technological University</p>
-                  <p>Port Road,</p>
-                  <p>Letterkenny, Co.Donegal Ireland, F92 A0PY</p>
+<div className="grid md:grid-cols-2 gap-4">
+                <div className="flex">
+                  <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
+                  <div>
+                    <p>Head Office,</p>
+                    <p>Ground Floor,</p>
+                    <p>71 Lower Baggot Street,</p>
+                    <p>Dublin 2,</p>
+                    <p>Co. Dublin, D02 P593, Ireland.</p>
+                    <p>Company Register Number : 785640</p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
+                  <div>
+                    <p>Unit 277,</p>
+                    <p>Colab,</p>
+                    <p>Atlantic Technological University</p>
+                    <p>Port Road,</p>
+                    <p>Letterkenny, Co.Donegal Ireland, F92 A0PY</p>
+                  </div>
                 </div>
               </div>
+
             </div>
             <LeafletMap className="w-full h-80 shadow rounded-xl overflow-hidden"/>
           </motion.div>

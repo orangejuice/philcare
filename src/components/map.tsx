@@ -45,8 +45,11 @@ export function LeafletMap(props: ComponentPropsWithoutRef<"div">) {
         attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://www.thunderforest.com">Thunderforest</a>`
       }).addTo(map)
 
-      const marker = L.marker([54.9514628, -7.7191516]).addTo(map)
-      marker.bindPopup("PhilCare Ireland").openPopup()
+      const marker1 = L.marker([54.9514628, -7.7191516]).addTo(map)
+      marker1.bindPopup("PhilCare Letterkenny, Ireland").openPopup();
+
+      const marker2 = L.marker([53.33553036554026, -6.246037556405875]).addTo(map)
+      marker2.bindPopup("PhilCare Dublin, Ireland").openPopup();
     }
   }
 

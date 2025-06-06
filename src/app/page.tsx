@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import {motion} from "framer-motion"
-import {ArrowRight, BookOpen, Briefcase, Building, CheckCircle, Globe, HandCoins, HandHelping, Heart, Home as HomeIcon, Mail, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
+import {ArrowRight, BookOpen, Briefcase, Building, CheckCircle, Globe, HandCoins, HandHelping, Heart, Home as HomeIcon, Mail, MailIcon, MapPin, Phone, Scale, Users, Workflow} from "lucide-react"
 import {CheckBadgeIcon} from "@heroicons/react/16/solid"
 import {ContactForm} from "@/app/form"
 import {Image} from "@/components/ui/image"
@@ -275,7 +275,7 @@ export default function Home() {
               <p className="flex items-center">
                 <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 801 8681 (WhatsApp)
               </p>
-              <p className="flex items-center">
+              <p className="flex">
                 <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie<br/>
                 Customer Live in inquiry : inquiries@philcare.ie <br/>Care Worker Application : jobs@philcare.ie
               </p>

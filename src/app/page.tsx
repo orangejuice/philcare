@@ -276,7 +276,8 @@ export default function Home() {
                 <Phone className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> +353 083 801 8681 (WhatsApp)
               </p>
               <p className="flex items-center">
-                <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie
+                <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> info@philcare.ie<br/>
+                Customer Live in inquiry : inquiries@philcare.ie <br/>Care Worker Application : jobs@philcare.ie
               </p>
 <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex">

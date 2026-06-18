@@ -281,7 +281,6 @@ export default function Home() {
               <div className="flex">
                 <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
                 <div>
-                  <p>Head Office,</p>
                   <p>Ground Floor,</p>
                   <p>71 Lower Baggot Street,</p>
                   <p>Dublin 2,</p>

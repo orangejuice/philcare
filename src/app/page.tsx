@@ -278,20 +278,17 @@ export default function Home() {
               <p className="flex">
                 <Mail className="mr-4 shrink-0 w-5 h-5 text-blue-500"/> joseph@philcare.ie
               </p>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="flex">
-                  <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
-                  <div>
-                    <p>Head Office,</p>
-                    <p>Ground Floor,</p>
-                    <p>71 Lower Baggot Street,</p>
-                    <p>Dublin 2,</p>
-                    <p>Co. Dublin, D02 P593, Ireland.</p>
-                    <p>Company Register Number : 785640</p>
-                  </div>
+              <div className="flex">
+                <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
+                <div>
+                  <p>Head Office,</p>
+                  <p>Ground Floor,</p>
+                  <p>71 Lower Baggot Street,</p>
+                  <p>Dublin 2,</p>
+                  <p>Co. Dublin, D02 P593, Ireland.</p>
+                  <p>Company Register Number : 785640</p>
                 </div>
               </div>
-
             </div>
             <LeafletMap className="w-full h-80 shadow rounded-xl overflow-hidden"/>
           </motion.div>

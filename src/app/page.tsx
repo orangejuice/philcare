@@ -290,16 +290,6 @@ export default function Home() {
                     <p>Company Register Number : 785640</p>
                   </div>
                 </div>
-                <div className="flex">
-                  <MapPin className="mr-4 shrink-0 w-5 h-5 text-blue-500"/>
-                  <div>
-                    <p>Unit 277,</p>
-                    <p>Colab,</p>
-                    <p>Atlantic Technological University</p>
-                    <p>Port Road,</p>
-                    <p>Letterkenny, Co.Donegal Ireland, F92 A0PY</p>
-                  </div>
-                </div>
               </div>
 
             </div>
